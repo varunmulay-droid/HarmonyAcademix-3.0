@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <title>वसतिगृह प्रवेश अर्ज</title>
+    <style>
+        body {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            margin: 40px;
+            background-color: #fff;
+            line-height: 1.7;
+        }
+
+        h2, h3 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="date"],
+        textarea {
+            width: 100%;
+            padding: 6px;
+            margin-top: 5px;
+            border: 1px solid #aaa;
+            border-radius: 4px;
+            font-size: 15px;
+        }
+
+        textarea {
+            height: 60px;
+        }
+
+        .signature-section {
+            margin-top: 30px;
+        }
+
+        .signature-block {
+            margin-top: 40px;
+        }
+
+        .rules {
+            margin-top: 50px;
+            border-top: 2px solid #000;
+            padding-top: 20px;
+        }
+
+        ol {
+            padding-left: 20px;
+        }
+
+        .date-right {
+            text-align: right;
+        }
+
+        button {
+            margin-top: 30px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #1d3557;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #457b9d;
+        }
+    </style>
+</head>
+<body>
+
+<h2>वसतिगृह प्रवेश अर्ज</h2>
+
+<form action="submit_form.php" method="POST">
+
+<div class="section">
+    <label>माननीय अधीक्षक,</label>
+    <p><input type="text" name="hostel_name" style="width: 250px;"> वसतिगृह <input type="text" name=" address " style="width: 250px;"></p>
+
+    <label>अर्जदार (पालकांचे नाव):</label>
+    <input type="text" name="parent_name">
+
+    <label>पत्ता:</label>
+    <input type="text" name="parent_address">
+
+    <p>माझा मुलगा / मुलगी <input type="text" name="student_name_1" style="width: 250px;"> यास / हिला आपल्या वसतिगृहात प्रवेश मिळावा म्हणून अर्ज करीत आहे.</p>
+</div>
+
+<h3>* मुलाची / मुलीची माहिती *</h3>
+
+<div class="section">
+    <label>१) संपूर्ण नाव:</label>
+    <input type="text" name="student_name">
+
+    <label>२) संपूर्ण पत्ता:</label>
+    <textarea name="student_address"></textarea>
+
+    <label>३) फोन नं.:</label>
+    <input type="tel" name="phone">
+
+    <label>४) जात व पोटजात:</label>
+    <input type="text" name="caste">
+
+    <label>५) जन्म ठिकाण:</label>
+    मु. <input type="text" name="birth_village" style="width: 250px;">    
+    ता. <input type="text" name="birth_taluka" style="width: 250px;">
+    जि. <input type="text" name="birth_district" style="width: 250px;">
+
+    <label>६) जन्म तारीख:</label>
+    <input type="date" name="dob" style="width: 250px;">
+
+    <label>७) वय चालू:</label>
+    वर्षे: <input type="text" name="age_years" placeholder="वर्षे" style="width: 250px;">
+    महिने: <input type="text" name="age_months" placeholder="महिने" style="width: 250px;">
+
+    <label>८) शिक्षण :</label>
+    <input type="text" name="education">
+
+    <label>९) पूर्वी शिकत असलेल्या शाळेचे नाव व पत्ता:</label>
+    <textarea name="previous_school"></textarea>
+
+    <label>१०) पालकांचे वार्षिक उत्पन्न:</label>
+    <input type="text" name="annual_income">
+
+    <label>११) मागील तीन वर्षांच्या परीक्षांचा निकाल:</label>
+    <textarea name="exam_results"></textarea>
+</div>
+
+<h3>* पालकांनी भरून द्यावयाचे करार-पत्र *</h3>
+
+<div class="section">
+    <label>प्रमाणित करणारा मजकूर:</label>
+    <p>मी <input type="text" name="guardian_name" style="width: 300px;"> लिहून देतो की, माझ्या पालकांकडून वसतिगृहाच्या नियमांचे उल्लंघन झाल्यास वसतिगृह चालविण्याचा निर्णय संस्थेस मान्य असेल. त्याविरुद्ध माझी कोणतीही तक्रार नाही.</p>
+    <p>वरील सर्व माहिती प्रत्यक्षात खरी आहे व मी वसतिगृहातील त्यांच्या श्रेणेमध्ये पूर्णपणे आहे.</p>
+</div>
+
+<div class="signature-section">
+    <label>पालकांची सही:</label>
+    <input type="file" name="parent_signature" accept="image/*">
+</div>
+
+<h3>* विद्यार्थ्याने भरून द्यावयाचे करार-पत्र *</h3>
+
+<div class="section">
+    <p>मी <input type="text" name="student_name_2" style="width: 300px;"> लिहून देतो की, वरील अर्जाच्या मागील बाजूस छापलेल्या नियम व अटी मला मान्य आहेत. नियमांचे उल्लंघन झाल्यास शाळेच्या वसतिगृह व्यवस्थापनाने केलेला निर्णय अंतिम राहील.</p>
+</div>
+
+<div class="signature-section">
+    <label>विद्यार्थ्याची सही:</label>
+    <input type="file" name="student_signature" accept="image/*">
+</div>
+
+<div class="signature-block">
+    <label>वसतिगृह व्यवस्थापकांनी भरावयाचे:</label>
+    <p>सदर अर्जाप्रमाणे  
+        र.नं.<input type="text" name="register_number" style="width: 250px;">    
+        दि.<input type="date" name="received_date" style="width: 250px;"> रोजी दाखल करून ठेवले.</p>
+        <label>अधीक्षक (स्वाक्षरी):</label>
+        <input type="file" name="warden_signature" accept="image/*">
+    </div>
+
+<div class="rules">
+    <h3>* वसतिगृहाचे नियम *</h3>
+    <ol>
+        <li>संस्थेच्या परवानगीशिवाय अनुपस्थित राहता येणार नाही.</li>
+        <li>संस्थेच्या संमतीशिवाय वसतिगृहात प्रवेश मिळणार नाही.</li>
+        <li>वसतिगृह नियमांचे काटेकोर पालन करणे बंधनकारक आहे.</li>
+        <li>शांतता, स्वच्छता, आणि शिस्त राखावी लागेल.</li>
+        <li>वसतिगृह प्रवेशानंतर अन्य संस्थेत प्रवेश घेतल्यास प्रवेश रद्द होईल.</li>
+        <li>स्वतंत्रपणे राहण्यास परवानगी नाही.</li>
+        <li>सर्व परीक्षा उपस्थित राहणे बंधनकारक आहे.</li>
+        <li>खोली व्यवस्थापनाच्या सूचनेनुसार बदली जाईल.</li>
+        <li>वर्तन सुसंगत ठेवणे आवश्यक आहे.</li>
+        <li>प्रशासनाच्या नविन नियमांचे पालन करावे लागेल.</li>
+        <li>अनधिकृत उपकरणांचा वापर टाळावा.</li>
+    </ol>
+</div>
+
+<div style="text-align: center;">
+    <button type="submit">Submit</button>
+</div>
+
+</form>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="mr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>प्रतिनिधान प्रमाणपत्र फॉर्म</title>
+    <style>
+        body {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            background: linear-gradient(to right, #f4f4f4, #e0eafc);
+            margin: 0;
+            padding: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 25px;
+            text-decoration: underline;
+            color: #2c3e50;
+        }
+
+        .school-name {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .form-container {
+            max-width: 700px;
+            margin: 100px auto 0;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            border: 2px solid #3498db;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+            color: #34495e;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            margin-top: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            margin-top: 25px;
+            padding: 12px;
+            background-color: #3498db;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 6px;
+            width: 100%;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="school-name">शाळेचे नाव: संग्राम मुकबधीर विद्यालय</div>
+
+    <h1>प्रतिनिधान प्रमाणपत्र फॉर्म</h1>
+
+    <div class="form-container">
+        <form action="certificate.html" method="get" target="_blank">
+
+            <label>विद्यार्थ्याचे पूर्ण नाव:</label>
+            <input type="text" name="name" required>
+
+            <label>शैक्षणिक वर्ष:</label>
+            <input type="text" name="year" required>
+
+            <label>इयत्ता:</label>
+            <input type="text" name="std" required>
+
+            <label>तुकडी:</label>
+            <input type="text" name="div" required>
+
+            <label>वर्तन:</label>
+            <input type="text" name="conduct" required>
+
+            <label>जात:</label>
+            <input type="text" name="caste" required>
+
+            <label>जन्मतारीख:</label>
+            <input type="date" name="dob" required>
+
+            <label>जन्मस्थान:</label>
+            <input type="text" name="birthplace" required>
+
+            <label>शाळेचे स्थळ:</label>
+            <input type="text" name="place" required>
+
+            <label>विद्यार्थी ID:</label>
+            <input type="text" name="id" required>
+
+            <button type="submit">दाखला तयार करा</button>
+        </form>
+    </div>
+</body>
+
+</html>

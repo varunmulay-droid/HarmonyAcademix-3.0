@@ -1,0 +1,1643 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <title>केस रेकॉर्ड फॉर्म</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: 'Noto Sans Devanagari', sans-serif;
+      padding: 30px;
+    }
+    .form-section-title {
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+	.form-section-title {
+            border-bottom: 2px solid #ccc;
+             
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+    
+  </style>
+</head>
+<body>
+  <div class="container bg-white p-4 shadow rounded">
+    <h2 class="text-center mb-4">केस रेकॉर्ड फॉर्म</h2>
+    <h5 class="form-section-title">विभाग - १: अ‍ॅलोपथी माहिती</h5>
+    <form>
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label for="name" class="form-label">१.१ नाव</label>
+          <input type="text" class="form-control" id="name" name="name">
+        </div>
+        <div class="col-md-6">
+          <label for="dob" class="form-label">१.२ जन्मतारीख</label>
+          <input type="date" class="form-control" id="dob" name="dob">
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label for="age" class="form-label">१.३ वय</label>
+          <input type="number" class="form-control" id="age" name="age">
+        </div>
+        <div class="col-md-6">
+          <label for="gender" class="form-label">१.४ लिंग</label>
+          <select class="form-select" id="gender" name="gender">
+            <option value="">-- निवडा --</option>
+            <option value="पुरुष">पुरुष</option>
+            <option value="स्त्री">स्त्री</option>
+            <option value="इतर">इतर</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="education" class="form-label">१.५ शिक्षण</label>
+        <input type="text" class="form-control" id="education" name="education">
+      </div>
+
+      <div class="row mb-3">
+<!-- वडिलांचे संपूर्ण नाव -->
+<div class="mb-4">
+  <h6>१.६ वडिलांचे संपूर्ण नाव</h6>
+  <div class="row">
+    <div class="col-md-3">
+      <label for="fatherName" class="form-label">नाव</label>
+      <input type="text" class="form-control" id="fatherName" name="father_name">
+    </div>
+    <div class="col-md-3">
+      <label for="fatherEducation" class="form-label">शिक्षण</label>
+      <input type="text" class="form-control" id="fatherEducation" name="father_education">
+    </div>
+    <div class="col-md-3">
+      <label for="fatherOccupation" class="form-label">व्यवसाय / उपजीविका</label>
+      <input type="text" class="form-control" id="fatherOccupation" name="father_occupation">
+    </div>
+    <div class="col-md-3">
+      <label for="fatherIncome" class="form-label">उत्पन्न</label>
+      <input type="text" class="form-control" id="fatherIncome" name="father_income">
+    </div>
+  </div>
+</div>
+
+<!-- आईचे संपूर्ण नाव -->
+<div class="mb-4">
+  <h6>१.७ आईचे संपूर्ण नाव</h6>
+  <div class="row">
+    <div class="col-md-3">
+      <label for="motherName" class="form-label">नाव</label>
+      <input type="text" class="form-control" id="motherName" name="mother_name">
+    </div>
+    <div class="col-md-3">
+      <label for="motherEducation" class="form-label">शिक्षण</label>
+      <input type="text" class="form-control" id="motherEducation" name="mother_education">
+    </div>
+    <div class="col-md-3">
+      <label for="motherOccupation" class="form-label">व्यवसाय / उपजीविका</label>
+      <input type="text" class="form-control" id="motherOccupation" name="mother_occupation">
+    </div>
+    <div class="col-md-3">
+      <label for="motherIncome" class="form-label">उत्पन्न</label>
+      <input type="text" class="form-control" id="motherIncome" name="mother_income">
+    </div>
+  </div>
+</div>
+      </div>
+
+      <!-- पालकांचे संपूर्ण नाव -->
+<div class="mb-4">
+  <h6>१.८ पालकांचे संपूर्ण नाव</h6>
+  <div class="row">
+    <div class="col-md-3">
+      <label for="guardianName" class="form-label">नाव</label>
+      <input type="text" class="form-control" id="guardianName" name="guardian_name">
+    </div>
+    <div class="col-md-3">
+      <label for="guardianEducation" class="form-label">शिक्षण</label>
+      <input type="text" class="form-control" id="guardianEducation" name="guardian_education">
+    </div>
+    <div class="col-md-3">
+      <label for="guardianOccupation" class="form-label">व्यवसाय / उपजीविका</label>
+      <input type="text" class="form-control" id="guardianOccupation" name="guardian_occupation">
+    </div>
+    <div class="col-md-3">
+      <label for="guardianIncome" class="form-label">उत्पन्न</label>
+      <input type="text" class="form-control" id="guardianIncome" name="guardian_income">
+    </div>
+  </div>
+
+  <div class="row mt-3">
+    <div class="col-md-6">
+      <label for="guardianAddress" class="form-label">पालकांचा पत्ता</label>
+      <input type="text" class="form-control" id="guardianAddress" name="guardian_address">
+    </div>
+    <div class="col-md-6">
+      <label for="guardianMobile" class="form-label">मोबाइल क्रमांक</label>
+      <input type="tel" class="form-control" id="guardianMobile" name="guardian_mobile">
+    </div>
+  </div>
+</div>
+
+      <div class="mb-3">
+        <label for="relativesAddress" class="form-label">साध्याचा पत्ता</label>
+        <textarea class="form-control" id="relativesAddress" rows="2" name="relatives_address"></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label for="permanentAddress" class="form-label">मूळ स्थायिकरण पत्ता</label>
+        <textarea class="form-control" id="permanentAddress" rows="2" name="permanent_address"></textarea>
+      </div>
+
+      
+
+
+  <div class="row mb-3">
+    <div class="col-md-4">
+      <label class="form-label">१.१० कुटुंबाचा सामाजिक / आर्थिक स्तर</label>
+      <select class="form-select" name="economic_status">
+        <option selected disabled>निवडा</option>
+        <option value="उच्च">उच्च</option>
+        <option value="मध्यम">मध्यम</option>
+        <option value="क.नि:स्त्र">क.नि:स्त्र</option>
+      </select>
+    </div>
+    <div class="col-md-4">
+      <label class="form-label">१.११ शहरी / ग्रामीण / निमशहरी</label>
+      <select class="form-select" name="area_type">
+        <option selected disabled>निवडा</option>
+        <option value="शहरी">शहरी</option>
+        <option value="ग्रामीण">ग्रामीण</option>
+        <option value="निमशहरी">निमशहरी</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col-md-4">
+      <label for="religion" class="form-label">१.१२ धर्म</label>
+      <input type="text" class="form-control" id="religion" name="religion">
+    </div>
+    <div class="col-md-4">
+      <label for="caste" class="form-label">१.१३ जात</label>
+      <input type="text" class="form-control" id="caste" name="caste">
+    </div>
+    <div class="col-md-4">
+      <label for="motherTongue" class="form-label">१.१४ मातृभाषा</label>
+      <input type="text" class="form-control" id="motherTongue" name="mother_tongue">
+    </div>
+  </div>
+
+
+  <hr class="my-4">
+
+<div class="mb-4">
+  <h4 class="mb-3">विभाग – २</h4>
+
+  <div class="mb-3">
+    <label for="infoRelationPersonal" class="form-label">२.१ माहिती देणाऱ्याचे व्यक्तीशी संबंध</label>
+    <input type="text" class="form-control" id="infoRelationPersonal" name="info_relation_personal">
+  </div>
+
+  <div class="mb-3">
+    <label for="contactDuration" class="form-label">२.२ माहिती देणाऱ्याचे व्यक्तीशी संपर्काचा कालावधी</label>
+    <input type="text" class="form-control" id="contactDuration" name="contact_duration">
+  </div>
+
+  <div class="row mb-3">
+    <div class="col-md-6">
+      <label for="infoTrustworthiness" class="form-label">- माहितीची विश्वासार्हता</label>
+      <select class="form-select" id="infoTrustworthiness" name="info_trustworthiness">
+        <option selected disabled>निवडा</option>
+        <option value="विश्वासार्ह">विश्वासार्ह</option>
+        <option value="अविश्वासार्ह">अविश्वासार्ह</option>
+      </select>
+    </div>
+    <div class="col-md-6">
+      <label for="infoCompleteness" class="form-label">- दिलेल्या माहितीत अपूर्णता</label>
+      <select class="form-select" id="infoCompleteness" name="info_completeness">
+        <option selected disabled>निवडा</option>
+        <option value="पूर्ण">पूर्ण</option>
+        <option value="अपूर्ण">अपूर्ण</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="complaintDetails" class="form-label">२.३ व्यक्तीच्या तक्रारीचे स्वरूप / तक्रारीची पातळी व तक्रारीचा कालावधी</label>
+    <textarea class="form-control" id="complaintDetails" name="complaint_details" rows="3"></textarea>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">२.४ व्यक्तीवर झालेल्या पूर्वीच्या उपचारांची माहिती</label>
+    <p class="form-text">उपचारांचे स्वरूप, कालावधी व अनुशंगिक काळाच्या नोंदी</p>
+  
+    <div class="mb-3">
+      <label for="medications" class="form-label">औषधे</label>
+      <select class="form-select" id="medications" name="past_treatment_medications">
+        <option selected disabled>निवडा</option>
+        <option value="घेतली">घेतली</option>
+        <option value="घेतली नाही">घेतली नाही</option>
+        <option value="चालू आहे">चालू आहे</option>
+        <option value="बंद केली">बंद केली</option>
+      </select>
+    </div>
+  
+    <div class="mb-3">
+      <label for="professionalTreatment" class="form-label">व्यवसायिक उपचार</label>
+      <select class="form-select" id="professionalTreatment" name="past_treatment_professional">
+        <option selected disabled>निवडा</option>
+        <option value="वैद्यकीय">वैद्यकीय</option>
+        <option value="मानसोपचार">मानसोपचार</option>
+        <option value="इतर">इतर</option>
+      </select>
+    </div>
+  
+    <div class="mb-3">
+      <label for="physicalTreatment" class="form-label">शारीरिक उपचार</label>
+      <select class="form-select" id="physicalTreatment" name="past_treatment_physical">
+        <option selected disabled>निवडा</option>
+        <option value="झालेला आहे">झालेला आहे</option>
+        <option value="झालेला नाही">झालेला नाही</option>
+      </select>
+    </div>
+  
+    <div class="mb-3">
+      <label for="otherTreatment" class="form-label">इतर</label>
+      <select class="form-select" id="otherTreatment" name="past_treatment_other">
+        <option selected disabled>निवडा</option>
+        <option value="होय">होय</option>
+        <option value="नाही">नाही</option>
+      </select>
+    </div>
+  </div>
+  <hr class="my-4">
+  <h4 class="mb-3">विभाग – ३: बाळंतपणाचा इतिहास</h4>
+
+<div class="mb-3">
+  <h5 class="mt-4 mb-3">३.१ प्रसूतिपूर्व</h5>
+
+  <!-- गर्भधारणा -->
+  <div class="mb-3">
+    <label for="pregnancyOccurred" class="form-label">गरोदारपण</label>
+    <select class="form-select" id="pregnancyOccurred" name="pregnancy_occurred">
+      <option selected disabled>निवडा</option>
+      <option value="होते">हवी असलेले</option>
+      <option value="नव्हते">नको असलेले</option>
+    </select>
+  </div>
+  
+  <!-- गर्भधारणेच्या वेळी वय -->
+  <div class="row">
+    <div class="col">
+      <label for="motherAge" class="form-label">गर्भधारणेच्या वेळी आईचे वय</label>
+      <input type="number" class="form-control" id="motherAge" name="mother_age">
+    </div>
+    <div class="col">
+      <label for="fatherAge" class="form-label">वडिलांचे वय</label>
+      <input type="number" class="form-control" id="fatherAge" name="father_age">
+    </div>
+  </div>
+  
+  <div class="mb-3">
+    <label for="xrayTaken" class="form-label">एक्स रे काढला होता का?</label>
+    <select class="form-select" id="xrayTaken" name="xray_taken">
+      <option selected disabled>निवडा</option>
+      <option value="होय">होय</option>
+      <option value="नाही">नाही</option>
+    </select>
+  </div>
+  
+<!-- गर्भपात करण्याचा प्रयत्न केला का? -->
+<div class="mb-3">
+  <label for="abortionAttempted" class="form-label">गर्भपात करण्याचा प्रयत्न केला का?</label>
+  <select class="form-select" id="abortionAttempted" name="abortion_attempted">
+    <option selected disabled>निवडा</option>
+    <option value="होय">होय</option>
+    <option value="नाही">नाही</option>
+  </select>
+</div>
+
+<!-- नैसर्गिक गर्भपाताची शक्यता होती का? -->
+<div class="mb-3">
+  <label for="naturalAbortionRisk" class="form-label">नैसर्गिक गर्भपाताची शक्यता होती का?</label>
+  <select class="form-select" id="naturalAbortionRisk" name="natural_abortion_risk">
+    <option selected disabled>निवडा</option>
+    <option value="होय">होय</option>
+    <option value="नाही">नाही</option>
+  </select>
+</div>
+
+<!-- मातेला झटके येत होते का? -->
+<div class="mb-3">
+  <label for="motherSeizures" class="form-label">मातेला झटके येत होते का?</label>
+  <select class="form-select" id="motherSeizures" name="mother_seizures">
+    <option selected disabled>निवडा</option>
+    <option value="होय">होय</option>
+    <option value="नाही">नाही</option>
+  </select>
+</div>
+
+  
+  <!-- गर्भाची हालचाल -->
+<div class="mb-3">
+  <label for="fetalMovement" class="form-label">गर्भाची हालचाल</label>
+  <select class="form-select" id="fetalMovement" name="fetal_movement">
+    <option selected disabled>निवडा</option>
+    <option value="सर्वसाधारण">सर्वसाधारण</option>
+    <option value="जास्तीची">जास्तीची</option>
+    <option value="मंद">मंद</option>
+  </select>
+</div>
+
+  
+  <!-- औषधे घेतली का? -->
+<div class="mb-3">
+  <label for="medicationsTaken" class="form-label">औषधे घेतली का?</label>
+  <select class="form-select" id="medicationsTaken" name="medications_taken">
+    <option selected disabled>निवडा</option>
+    <option value="होय">होय</option>
+    <option value="नाही">नाही</option>
+  </select>
+</div>
+
+<!-- शारिरीक अथवा मानसिक आघात झाला होता का? -->
+<div class="mb-3">
+  <label for="physicalOrMentalTrauma" class="form-label">शारिरीक अथवा मानसिक आघात झाला होता का?</label>
+  <select class="form-select" id="physicalOrMentalTrauma" name="physical_or_mental_trauma">
+    <option selected disabled>निवडा</option>
+    <option value="होय">होय</option>
+    <option value="नाही">नाही</option>
+  </select>
+</div>
+
+<!-- पायावर सूज होती का? -->
+<div class="mb-3">
+  <label for="legSwelling" class="form-label">पायावर सूज होती का?</label>
+  <select class="form-select" id="legSwelling" name="leg_swelling">
+    <option selected disabled>निवडा</option>
+    <option value="होय">होय</option>
+    <option value="नाही">नाही</option>
+  </select>
+</div>
+
+  
+  <!-- प्रसुतीकालीन आजार -->
+<div class="mb-3">
+  <label for="deliveryDiseases" class="form-label">प्रसुतीकालीन आजार</label>
+  <input type="text" class="form-control" id="deliveryDiseases" name="delivery_diseases">
+</div>
+
+<!-- मधुमेह होता का? -->
+<div class="mb-3">
+  <label for="diabetes" class="form-label">मधुमेह होता का?</label>
+  <select class="form-select" id="diabetes" name="diabetes">
+    <option selected disabled>निवडा</option>
+    <option value="होय">होय</option>
+    <option value="नाही">नाही</option>
+  </select>
+</div>
+
+<!-- रक्तदाब अनियमित होता काय? -->
+<div class="mb-3">
+  <label for="irregularBP" class="form-label">रक्तदाब अनियमित होता काय?</label>
+  <select class="form-select" id="irregularBP" name="irregular_blood_pressure">
+    <option selected disabled>निवडा</option>
+    <option value="होय">होय</option>
+    <option value="नाही">नाही</option>
+  </select>
+</div>
+
+<!-- कावीळ झाली होती का? -->
+<div class="mb-3">
+  <label for="jaundice" class="form-label">कावीळ झाली होती का?</label>
+  <select class="form-select" id="jaundice" name="jaundice">
+    <option selected disabled>निवडा</option>
+    <option value="होय">होय</option>
+    <option value="नाही">नाही</option>
+  </select>
+</div>
+
+<!-- लैंगिक आजार होता का? -->
+<div class="mb-3">
+  <label for="stds" class="form-label">लैंगिक आजार होता का?</label>
+  <select class="form-select" id="stds" name="sexually_transmitted_diseases">
+    <option selected disabled>निवडा</option>
+    <option value="होय">होय</option>
+    <option value="नाही">नाही</option>
+  </select>
+</div>
+
+<!-- मातेच्या आहाराचा दर्जा -->
+<div class="mb-3">
+  <label for="maternalDietQuality" class="form-label">मातेच्या आहाराचा दर्जा</label>
+  <select class="form-select" id="maternalDietQuality" name="maternal_diet_quality">
+    <option selected disabled>निवडा</option>
+    <option value="उत्तम">उत्तम</option>
+    <option value="सरासरी">सरासरी</option>
+    <option value="कमी दर्जा">कमी दर्जा</option>
+  </select>
+</div>
+
+  
+  <!-- इतर काही -->
+  <div class="mb-3">
+    <label for="otherPregnancyDetails" class="form-label">इतर काही</label>
+    <textarea class="form-control" id="otherPregnancyDetails" name="other_pregnancy_details" rows="3"></textarea>
+  </div>
+  
+  <h5>३.२ प्रसुतीकालीन</h5>
+
+<!-- प्रसुति कुठे झाली -->
+<div class="mb-3">
+  <label for="deliveryPlace" class="form-label">प्रसुति कुठे झाली?</label>
+  <select class="form-select" id="deliveryPlace" name="delivery_place">
+    <option selected disabled>निवडा</option>
+    <option value="घरी">घरी</option>
+    <option value="दवाखाण्यात">दवाखाण्यात</option>
+  </select>
+</div>
+
+<!-- पूर्णकालीन की अकाली -->
+<div class="mb-3">
+  <label for="deliveryTiming" class="form-label">प्रसुतो पूर्णकालीन की अकाली?</label>
+  <select class="form-select" id="deliveryTiming" name="delivery_timing">
+    <option selected disabled>निवडा</option>
+    <option value="पूर्णकालीन">पूर्णकालीन</option>
+    <option value="अकाली">अकाली</option>
+  </select>
+</div>
+
+<!-- सर्वसाधारण की हत्याराच्या साहाय्याने -->
+<div class="mb-3">
+  <label for="deliveryMethod" class="form-label">प्रसुती सर्वसाधारण की हत्याराच्या साहाय्याने?</label>
+  <select class="form-select" id="deliveryMethod" name="delivery_method">
+    <option selected disabled>निवडा</option>
+    <option value="सर्वसाधारण">सर्वसाधारण</option>
+    <option value="हत्याराच्या साहाय्याने">हत्याराच्या साहाय्याने</option>
+  </select>
+</div>
+
+<!-- प्रसुती कालावधी -->
+<div class="mb-3">
+  <label for="deliveryDuration" class="form-label">प्रसुती कालावधी</label>
+  <select class="form-select" id="deliveryDuration" name="delivery_duration">
+    <option selected disabled>निवडा</option>
+    <option value="दीर्घकाळ">दीर्घकाळ</option>
+    <option value="सर्वसाधारण">सर्वसाधारण</option>
+    <option value="औषधाने घडवून आणली">औषधाने घडवून आणली</option>
+  </select>
+</div>
+
+<!-- असाधारण सादरीकरण -->
+<div class="mb-3">
+  <label for="presentation" class="form-label">जन्मावेळी असाधारण सादरीकरण</label>
+  <select class="form-select" id="presentation" name="presentation">
+    <option selected disabled>निवडा</option>
+    <option value="पायाळू">पायाळू</option>
+    <option value="आडवा">आडवा</option>
+    <option value="पालथा">पालथा</option>
+    <option value="निपजणे">निपजणे</option>
+  </select>
+</div>
+
+<!-- नाळ आधी बाहेर आली होती का -->
+<div class="mb-3">
+  <label for="cordProlapse" class="form-label">नाळ आधी बाहेर आली होती का?</label>
+  <select class="form-select" id="cordProlapse" name="cord_prolapse">
+    <option selected disabled>निवडा</option>
+    <option value="होय">होय</option>
+    <option value="नाही">नाही</option>
+  </select>
+</div>
+
+<!-- बाळ रडले का -->
+<div class="mb-3">
+  <label for="babyCried" class="form-label">जन्मानंतर मूल लगेच रडले का?</label>
+  <select class="form-select" id="babyCried" name="baby_cried">
+    <option selected disabled>निवडा</option>
+    <option value="होय">होय</option>
+    <option value="नाही">नाही</option>
+  </select>
+</div>
+
+<!-- उशीरा रडले -->
+<div class="mb-3">
+  <label for="babyCriedLate" class="form-label">जन्मानंतर मूल उशीरा रडले?</label>
+  <select class="form-select" id="babyCriedLate" name="baby_cried_late">
+    <option selected disabled>निवडा</option>
+    <option value="होय">होय</option>
+    <option value="नाही">नाही</option>
+  </select>
+</div>
+
+<!-- काविळ झाली होती का -->
+<div class="mb-3">
+  <label for="babyJaundice" class="form-label">बाळाला काविळ झाली होती का?</label>
+  <select class="form-select" id="babyJaundice" name="baby_jaundice">
+    <option selected disabled>निवडा</option>
+    <option value="होय">होय</option>
+    <option value="नाही">नाही</option>
+  </select>
+</div>
+
+<!-- इतर रोगांची लागण -->
+<div class="mb-3">
+  <label for="babyInfection" class="form-label">बाळाला इतर रोगांची लागण झाली होती का?</label>
+  <select class="form-select" id="babyInfection" name="baby_infection">
+    <option selected disabled>निवडा</option>
+    <option value="होय">होय</option>
+    <option value="नाही">नाही</option>
+  </select>
+</div>
+
+<!-- वजन -->
+<div class="mb-3">
+  <label for="babyWeight" class="form-label">जन्मल्यानंतर बाळाचे वजन</label>
+  <select class="form-select" id="babyWeight" name="baby_weight">
+    <option selected disabled>निवडा</option>
+    <option value="सर्वसाधारण">सर्वसाधारण</option>
+    <option value="कमी">कमी</option>
+    <option value="खूप कमी">खूप कमी</option>
+  </select>
+</div>
+
+<!-- मातेला झटके आले का -->
+<div class="mb-3">
+  <label for="motherSeizures" class="form-label">मातेला झटके आले होते का?</label>
+  <select class="form-select" id="motherSeizures" name="mother_seizures">
+    <option selected disabled>निवडा</option>
+    <option value="होय">होय</option>
+    <option value="नाही">नाही</option>
+  </select>
+</div>
+
+<!-- रक्तस्राव खूप झाला का -->
+<div class="mb-3">
+  <label for="excessiveBleeding" class="form-label">रक्तस्राव खूप झाला होता का?</label>
+  <select class="form-select" id="excessiveBleeding" name="excessive_bleeding">
+    <option selected disabled>निवडा</option>
+    <option value="होय">होय</option>
+    <option value="नाही">नाही</option>
+  </select>
+</div>
+
+<!-- जुळे होते का -->
+<div class="mb-3">
+  <label for="twins" class="form-label">जुळे होते का?</label>
+  <select class="form-select" id="twins" name="twins">
+    <option selected disabled>निवडा</option>
+    <option value="होय">होय</option>
+    <option value="नाही">नाही</option>
+  </select>
+</div>
+
+<!-- इतर काही -->
+<div class="mb-3">
+  <label for="otherDeliveryDetails" class="form-label">इतर काही</label>
+  <textarea class="form-control" id="otherDeliveryDetails" name="other_delivery_details" rows="3"></textarea>
+</div>
+
+<h5>३.३ प्रसुतीनंतर लगेच</h5>
+
+<!-- बाळाचा रंग -->
+<div class="mb-3">
+  <label for="babyColor" class="form-label">बाळाचा रंग</label>
+  <select class="form-select" id="babyColor" name="baby_color">
+    <option selected disabled>निवडा</option>
+    <option value="पिवळा (कावीळ)">कावीळ झालेला (पिवळा)</option>
+    <option value="निळा (प्राणवायू कमी)">प्राणवायू कमी पडलेला (निळा)</option>
+    <option value="गुलाबी (माक्त)">माक्त (गुलाबी)</option>
+    <option value="फिक्कट पोहरा (अशक्त)">अशक्त (फिक्कट पोहरा)</option>
+  </select>
+</div>
+
+<!-- श्वसनात अडचण -->
+<div class="mb-3">
+  <label for="breathingDifficulty" class="form-label">श्वसनात अडचन होती का?</label>
+  <select class="form-select" id="breathingDifficulty" name="breathing_difficulty">
+    <option selected disabled>निवडा</option>
+    <option value="होय">होय</option>
+    <option value="नाही">नाही</option>
+  </select>
+</div>
+
+<!-- बाळाची हालचाल -->
+<div class="mb-3">
+  <label for="babyMovement" class="form-label">बाळाची हालचाल</label>
+  <select class="form-select" id="babyMovement" name="baby_movement">
+    <option selected disabled>निवडा</option>
+    <option value="जास्त">जास्त</option>
+    <option value="संथ">संथ</option>
+    <option value="सर्वसाधारण">सर्वसाधारण</option>
+  </select>
+</div>
+
+<!-- दुग्धपानाबद्दल माहिती -->
+<div class="mb-3">
+  <label for="feedingType" class="form-label">दुग्धपानाबद्दल माहिती</label>
+  <select class="form-select" id="feedingType" name="feeding_type">
+    <option selected disabled>निवडा</option>
+    <option value="स्तनपान">स्तनपान</option>
+    <option value="वरचे दूध">वरचे दूध</option>
+  </select>
+</div>
+
+<div class="mb-3">
+  <label for="feedingSchedule" class="form-label">दुग्धपान कसे होते?</label>
+  <select class="form-select" id="feedingSchedule" name="feeding_schedule">
+    <option selected disabled>निवडा</option>
+    <option value="बाळाच्या मागणीनुसार">बाळाच्या मागणीनुसार</option>
+    <option value="वेळापत्रकानुसार">वेळापत्रकानुसार</option>
+  </select>
+</div>
+
+<!-- दुग्धपानातील समस्या -->
+<div class="mb-3">
+  <label for="feedingProblems" class="form-label">दुग्धपानातील समस्या</label>
+  <textarea class="form-control" id="feedingProblems" name="feeding_problems" rows="2"></textarea>
+</div>
+
+<!-- उत्सर्जन क्रियेबाबत माहिती -->
+<div class="mb-3">
+  <label for="excretionInfo" class="form-label">उत्सर्जन क्रियेबाबत माहिती</label>
+  <textarea class="form-control" id="excretionInfo" name="excretion_info" rows="2"></textarea>
+</div>
+
+<!-- कावीळ झाली काय -->
+<div class="mb-3">
+  <label for="jaundice" class="form-label">कावीळ झाली काय?</label>
+  <select class="form-select" id="jaundice" name="jaundice">
+    <option selected disabled>निवडा</option>
+    <option value="होय">होय</option>
+    <option value="नाही">नाही</option>
+  </select>
+</div>
+
+<!-- आषात जाम झाली का -->
+<div class="mb-3">
+  <label for="meconiumBlocked" class="form-label">आघात जखम झाली का?</label>
+  <select class="form-select" id="meconiumBlocked" name="meconium_blocked">
+    <option selected disabled>निवडा</option>
+    <option value="होय">होय</option>
+    <option value="नाही">नाही</option>
+  </select>
+</div>
+
+<!-- संसर्ग झाला का -->
+<div class="mb-3">
+  <label for="infection" class="form-label">संसर्ग झाला होता का?</label>
+  <select class="form-select" id="infection" name="infection">
+    <option selected disabled>निवडा</option>
+    <option value="होय">होय</option>
+    <option value="नाही">नाही</option>
+  </select>
+</div>
+
+<!-- झटके आले का -->
+<div class="mb-3">
+  <label for="seizures" class="form-label">झटके आले होते का?</label>
+  <select class="form-select" id="seizures" name="seizures">
+    <option selected disabled>निवडा</option>
+    <option value="होय">होय</option>
+    <option value="नाही">नाही</option>
+  </select>
+</div>
+
+<!-- जन्मजात शारीरिक उणीव -->
+<div class="mb-3">
+  <label for="congenitalIssues" class="form-label">जन्मजात शारीरिक उणीन</label>
+  <textarea class="form-control" id="congenitalIssues" name="congenital_issues" rows="2"></textarea>
+</div>
+
+<!-- बाळाचे संगोपन -->
+<div class="mb-3">
+  <label for="childCare" class="form-label">बाळाचे संगोपन कसे झाले?</label>
+  <textarea class="form-control" id="childCare" name="child_care" rows="2"></textarea>
+</div>
+
+<!-- इतर काही -->
+<div class="mb-3">
+  <label for="otherPostDelivery" class="form-label">इतर काही</label>
+  <textarea class="form-control" id="otherPostDelivery" name="other_post_delivery" rows="2"></textarea>
+</div>
+
+<h5>३.४ अर्भकावस्थेतील वैद्यकीय इतिहास</h5>
+
+<!-- त्वचेवर पुरळ होते का ? -->
+<div class="mb-3">
+  <label for="skinRash" class="form-label">त्वचेवर पुरळ होते का ?</label>
+  <select class="form-select" id="skinRash" name="skin_rash">
+    <option selected disabled>निवडा</option>
+    <option value="होय">होय</option>
+    <option value="नाही">नाही</option>
+  </select>
+</div>
+
+<!-- लागण झालेले रोग होते का ? -->
+<div class="mb-3">
+  <label for="infection" class="form-label">लागण झालेले रोग होते का ?</label>
+  <select class="form-select" id="infection" name="infection">
+    <option selected disabled>निवडा</option>
+    <option value="होय">होय</option>
+    <option value="नाही">नाही</option>
+  </select>
+</div>
+
+<!-- काही जखम झाली का ? -->
+<div class="mb-3">
+  <label for="wounds" class="form-label">काही जखम झाली का ?</label>
+  <select class="form-select" id="wounds" name="wounds">
+    <option selected disabled>निवडा</option>
+    <option value="होय">होय</option>
+    <option value="नाही">नाही</option>
+  </select>
+</div>
+
+<!-- झटके येत होते का ? -->
+<div class="mb-3">
+  <label for="seizures" class="form-label">झटके येत होते का ?</label>
+  <select class="form-select" id="seizures" name="seizures">
+    <option selected disabled>निवडा</option>
+    <option value="होय">होय</option>
+    <option value="नाही">नाही</option>
+  </select>
+</div>
+
+<!-- काविळ झाली होती का ? -->
+<div class="mb-3">
+  <label for="jaundice" class="form-label">काविळ झाली होती का ?</label>
+  <select class="form-select" id="jaundice" name="jaundice">
+    <option selected disabled>निवडा</option>
+    <option value="होय">होय</option>
+    <option value="नाही">नाही</option>
+  </select>
+</div>
+
+<!-- पचनसंस्थेत दोज होता का ? -->
+<div class="mb-3">
+  <label for="digestiveIssues" class="form-label">पचनसंस्थेत दोज होता का ?</label>
+  <select class="form-select" id="digestiveIssues" name="digestive_issues">
+    <option selected disabled>निवडा</option>
+    <option value="होय">होय</option>
+    <option value="नाही">नाही</option>
+  </select>
+</div>
+
+<!-- इतर काही -->
+<div class="mb-3">
+  <label for="otherIssues" class="form-label">इतर काही</label>
+  <textarea class="form-control" id="otherIssues" name="other_issues" rows="2"></textarea>
+</div>
+
+<h5>३.५ लसीकरण इतिहास</h5>
+
+<!-- पोलिओ -->
+<div class="mb-3">
+  <label for="polio" class="form-label">१) पोलिओ</label>
+  <div class="row">
+    <div class="col-md-4">
+      <label for="polioFirstDose" class="form-label">प्रथम डोस दिला काय</label>
+      <select class="form-select" id="polioFirstDose" name="polio_first_dose">
+        <option selected disabled>निवडा</option>
+        <option value="होय">होय</option>
+        <option value="नाही">नाही</option>
+      </select>
+    </div>
+    <div class="col-md-4">
+      <label for="polioBoosterDose" class="form-label">बुल्टर डोस दिला काय</label>
+      <select class="form-select" id="polioBoosterDose" name="polio_booster_dose">
+        <option selected disabled>निवडा</option>
+        <option value="होय">होय</option>
+        <option value="नाही">नाही</option>
+      </select>
+    </div>
+    <div class="col-md-4">
+      <label for="polioBoosterDuration" class="form-label">(दिला असल्यास कालावधी)</label>
+      <input type="text" class="form-control" id="polioBoosterDuration" name="polio_booster_duration">
+    </div>
+  </div>
+</div>
+
+<!-- घटसर्प -->
+<div class="mb-3">
+  <label for="diphtheria" class="form-label">२) घटसर्प</label>
+  <div class="row">
+    <div class="col-md-4">
+      <label for="diphtheriaFirstDose" class="form-label">प्रथम डोस दिला काय</label>
+      <select class="form-select" id="diphtheriaFirstDose" name="diphtheria_first_dose">
+        <option selected disabled>निवडा</option>
+        <option value="होय">होय</option>
+        <option value="नाही">नाही</option>
+      </select>
+    </div>
+    <div class="col-md-4">
+      <label for="diphtheriaBoosterDose" class="form-label">बुल्टर डोस दिला काय</label>
+      <select class="form-select" id="diphtheriaBoosterDose" name="diphtheria_booster_dose">
+        <option selected disabled>निवडा</option>
+        <option value="होय">होय</option>
+        <option value="नाही">नाही</option>
+      </select>
+    </div>
+    <div class="col-md-4">
+      <label for="diphtheriaBoosterDuration" class="form-label">(दिला असल्यास कालावधी)</label>
+      <input type="text" class="form-control" id="diphtheriaBoosterDuration" name="diphtheria_booster_duration">
+    </div>
+  </div>
+</div>
+
+<!-- डांग्या खोकला -->
+<div class="mb-3">
+  <label for="whoopingCough" class="form-label">३) डांग्या खोकला</label>
+  <div class="row">
+    <div class="col-md-4">
+      <label for="whoopingCoughFirstDose" class="form-label">प्रथम डोस दिला काय</label>
+      <select class="form-select" id="whoopingCoughFirstDose" name="whooping_cough_first_dose">
+        <option selected disabled>निवडा</option>
+        <option value="होय">होय</option>
+        <option value="नाही">नाही</option>
+      </select>
+    </div>
+    <div class="col-md-4">
+      <label for="whoopingCoughBoosterDose" class="form-label">बुल्टर डोस दिला काय</label>
+      <select class="form-select" id="whoopingCoughBoosterDose" name="whooping_cough_booster_dose">
+        <option selected disabled>निवडा</option>
+        <option value="होय">होय</option>
+        <option value="नाही">नाही</option>
+      </select>
+    </div>
+    <div class="col-md-4">
+      <label for="whoopingCoughBoosterDuration" class="form-label">(दिला असल्यास कालावधी)</label>
+      <input type="text" class="form-control" id="whoopingCoughBoosterDuration" name="whooping_cough_booster_duration">
+    </div>
+  </div>
+</div>
+
+<!-- धनुर्वात -->
+<div class="mb-3">
+  <label for="tetanus" class="form-label">४) धनुर्वात</label>
+  <div class="row">
+    <div class="col-md-4">
+      <label for="tetanusFirstDose" class="form-label">प्रथम डोस दिला काय</label>
+      <select class="form-select" id="tetanusFirstDose" name="tetanus_first_dose">
+        <option selected disabled>निवडा</option>
+        <option value="होय">होय</option>
+        <option value="नाही">नाही</option>
+      </select>
+    </div>
+    <div class="col-md-4">
+      <label for="tetanusBoosterDose" class="form-label">बुल्टर डोस दिला काय</label>
+      <select class="form-select" id="tetanusBoosterDose" name="tetanus_booster_dose">
+        <option selected disabled>निवडा</option>
+        <option value="होय">होय</option>
+        <option value="नाही">नाही</option>
+      </select>
+    </div>
+    <div class="col-md-4">
+      <label for="tetanusBoosterDuration" class="form-label">(दिला असल्यास कालावधी)</label>
+      <input type="text" class="form-control" id="tetanusBoosterDuration" name="tetanus_booster_duration">
+    </div>
+  </div>
+</div>
+
+<!-- क्षय (टी. बो) -->
+<div class="mb-3">
+  <label for="tb" class="form-label">५) क्षय (टी. बो)</label>
+  <div class="row">
+    <div class="col-md-4">
+      <label for="tbFirstDose" class="form-label">प्रथम डोस दिला काय</label>
+      <select class="form-select" id="tbFirstDose" name="tb_first_dose">
+        <option selected disabled>निवडा</option>
+        <option value="होय">होय</option>
+        <option value="नाही">नाही</option>
+      </select>
+    </div>
+    <div class="col-md-4">
+      <label for="tbBoosterDose" class="form-label">बुल्टर डोस दिला काय</label>
+      <select class="form-select" id="tbBoosterDose" name="tb_booster_dose">
+        <option selected disabled>निवडा</option>
+        <option value="होय">होय</option>
+        <option value="नाही">नाही</option>
+      </select>
+    </div>
+    <div class="col-md-4">
+      <label for="tbBoosterDuration" class="form-label">(दिला असल्यास कालावधी)</label>
+      <input type="text" class="form-control" id="tbBoosterDuration" name="tb_booster_duration">
+    </div>
+  </div>
+</div>
+
+<!-- गोवर -->
+<div class="mb-3">
+  <label for="measles" class="form-label">६) गोवर</label>
+  <div class="row">
+    <div class="col-md-4">
+      <label for="measlesFirstDose" class="form-label">प्रथम डोस दिला काय</label>
+      <select class="form-select" id="measlesFirstDose" name="measles_first_dose">
+        <option selected disabled>निवडा</option>
+        <option value="होय">होय</option>
+        <option value="नाही">नाही</option>
+      </select>
+    </div>
+    <div class="col-md-4">
+      <label for="measlesBoosterDose" class="form-label">बुल्टर डोस दिला काय</label>
+      <select class="form-select" id="measlesBoosterDose" name="measles_booster_dose">
+        <option selected disabled>निवडा</option>
+        <option value="होय">होय</option>
+        <option value="नाही">नाही</option>
+      </select>
+    </div>
+    <div class="col-md-4">
+      <label for="measlesBoosterDuration" class="form-label">(दिला असल्यास कालावधी)</label>
+      <input type="text" class="form-control" id="measlesBoosterDuration" name="measles_booster_duration">
+    </div>
+  </div>
+</div>
+
+<!-- विषमज्वर (टाइफाईड) -->
+<div class="mb-3">
+  <label for="typhoid" class="form-label">७) विषमज्वर (टाइफाईड)</label>
+  <div class="row">
+    <div class="col-md-4">
+      <label for="typhoidFirstDose" class="form-label">प्रथम डोस दिला काय</label>
+      <select class="form-select" id="typhoidFirstDose" name="typhoid_first_dose">
+        <option selected disabled>निवडा</option>
+        <option value="होय">होय</option>
+        <option value="नाही">नाही</option>
+      </select>
+    </div>
+    <div class="col-md-4">
+      <label for="typhoidBoosterDose" class="form-label">बुल्टर डोस दिला काय</label>
+      <select class="form-select" id="typhoidBoosterDose" name="typhoid_booster_dose">
+        <option selected disabled>निवडा</option>
+        <option value="होय">होय</option>
+        <option value="नाही">नाही</option>
+      </select>
+    </div>
+    <div class="col-md-4">
+      <label for="typhoidBoosterDuration" class="form-label">(दिला असल्यास कालावधी)</label>
+      <input type="text" class="form-control" id="typhoidBoosterDuration" name="typhoid_booster_duration">
+    </div>
+  </div>
+</div>
+
+<!-- कॉलरा (पटकी) -->
+<div class="mb-3">
+  <label for="cholera" class="form-label">८) कॉलरा (पटकी)</label>
+  <div class="row">
+    <div class="col-md-4">
+      <label for="choleraFirstDose" class="form-label">प्रथम डोस दिला काय</label>
+      <select class="form-select" id="choleraFirstDose" name="cholera_first_dose">
+        <option selected disabled>निवडा</option>
+        <option value="होय">होय</option>
+        <option value="नाही">नाही</option>
+      </select>
+    </div>
+    <div class="col-md-4">
+      <label for="choleraBoosterDose" class="form-label">बुल्टर डोस दिला काय</label>
+      <select class="form-select" id="choleraBoosterDose" name="cholera_booster_dose">
+        <option selected disabled>निवडा</option>
+        <option value="होय">होय</option>
+        <option value="नाही">नाही</option>
+      </select>
+    </div>
+    <div class="col-md-4">
+      <label for="choleraBoosterDuration" class="form-label">(दिला असल्यास कालावधी)</label>
+      <input type="text" class="form-control" id="choleraBoosterDuration" name="cholera_booster_duration">
+    </div>
+  </div>
+</div>
+
+<!-- कावीळ -->
+<div class="mb-3">
+  <label for="jaundice" class="form-label">९) कावीळ</label>
+  <div class="row">
+    <div class="col-md-4">
+      <label for="jaundiceFirstDose" class="form-label">प्रथम डोस दिला काय</label>
+      <select class="form-select" id="jaundiceFirstDose" name="jaundice_first_dose">
+        <option selected disabled>निवडा</option>
+        <option value="होय">होय</option>
+        <option value="नाही">नाही</option>
+      </select>
+    </div>
+    <div class="col-md-4">
+      <label for="jaundiceBoosterDose" class="form-label">बुल्टर डोस दिला काय</label>
+      <select class="form-select" id="jaundiceBoosterDose" name="jaundice_booster_dose">
+        <option selected disabled>निवडा</option>
+        <option value="होय">होय</option>
+        <option value="नाही">नाही</option>
+      </select>
+    </div>
+    <div class="col-md-4">
+      <label for="jaundiceBoosterDuration" class="form-label">(दिला असल्यास कालावधी)</label>
+      <input type="text" class="form-control" id="jaundiceBoosterDuration" name="jaundice_booster_duration">
+    </div>
+  </div>
+</div>
+
+
+<h5>३.६ विकासाचे टप्पे</h5>
+
+<!-- स्मित -->
+<div class="mb-3">
+  <label for="smile" class="form-label">स्मित (६ आठवडे)</label>
+  <select class="form-select" id="smile" name="smile">
+    <option selected disabled>निवडा</option>
+    <option value="सर्वसाधारण">सर्वसाधारण</option>
+    <option value="उशीरा">उशीरा</option>
+  </select>
+</div>
+
+<!-- मानेवरचा ताबा -->
+<div class="mb-3">
+  <label for="neckControl" class="form-label">मानेवरचा ताबा (४ महिनें)</label>
+  <select class="form-select" id="neckControl" name="neck_control">
+    <option selected disabled>निवडा</option>
+    <option value="सर्वसाधारण">सर्वसाधारण</option>
+    <option value="उशीरा">उशीरा</option>
+  </select>
+</div>
+
+<!-- उलया पालथा होणे -->
+<div class="mb-3">
+  <label for="turningOver" class="form-label">उलया पालथा होणे (५ ते ७ महिने)</label>
+  <select class="form-select" id="turningOver" name="turning_over">
+    <option selected disabled>निवडा</option>
+    <option value="सर्वसाधारण">सर्वसाधारण</option>
+    <option value="उशीरा">उशीरा</option>
+  </select>
+</div>
+
+<!-- गुडघ्यावर उभा राहणे -->
+<div class="mb-3">
+  <label for="standingKnees" class="form-label">गुडघ्यावर उभा राहणे (६ ते ८ महिनें)</label>
+  <select class="form-select" id="standingKnees" name="standing_knees">
+    <option selected disabled>निवडा</option>
+    <option value="सर्वसाधारण">सर्वसाधारण</option>
+    <option value="उशीरा">उशीरा</option>
+  </select>
+</div>
+
+<!-- रोगणे -->
+<div class="mb-3">
+  <label for="crawling" class="form-label">रोगणे (८ ते १० महिने)</label>
+  <select class="form-select" id="crawling" name="crawling">
+    <option selected disabled>निवडा</option>
+    <option value="सर्वसाधारण">सर्वसाधारण</option>
+    <option value="उशीरा">उशीरा</option>
+  </select>
+</div>
+
+<!-- बसणे -->
+<div class="mb-3">
+  <label for="sitting" class="form-label">बसणे (८ महिनें)</label>
+  <select class="form-select" id="sitting" name="sitting">
+    <option selected disabled>निवडा</option>
+    <option value="सर्वसाधारण">सर्वसाधारण</option>
+    <option value="उशीरा">उशीरा</option>
+  </select>
+</div>
+
+<!-- उमे राहणे -->
+<div class="mb-3">
+  <label for="standing" class="form-label">उमे राहणे (१२ ते १४ महिने)</label>
+  <select class="form-select" id="standing" name="standing">
+    <option selected disabled>निवडा</option>
+    <option value="सर्वसाधारण">सर्वसाधारण</option>
+    <option value="उशीरा">उशीरा</option>
+  </select>
+</div>
+
+<!-- चालणे -->
+<div class="mb-3">
+  <label for="walking" class="form-label">चालणे (१८ महिने)</label>
+  <select class="form-select" id="walking" name="walking">
+    <option selected disabled>निवडा</option>
+    <option value="सर्वसाधारण">सर्वसाधारण</option>
+    <option value="उशीरा">उशीरा</option>
+  </select>
+</div>
+
+<!-- बोबडे बोलणें -->
+<div class="mb-3">
+  <label for="babbling" class="form-label">बोबडे बोलणें (८ महिने)</label>
+  <select class="form-select" id="babbling" name="babbling">
+    <option selected disabled>निवडा</option>
+    <option value="सर्वसाधारण">सर्वसाधारण</option>
+    <option value="उशीरा">उशीरा</option>
+  </select>
+</div>
+
+<!-- पहिला अर्थपूर्ण शद्व बोलणे -->
+<div class="mb-3">
+  <label for="firstMeaningfulWord" class="form-label">पहिला अर्थपूर्ण शद्व बोलणे (१ वर्षे)</label>
+  <select class="form-select" id="firstMeaningfulWord" name="first_meaningful_word">
+    <option selected disabled>निवडा</option>
+    <option value="सर्वसाधारण">सर्वसाधारण</option>
+    <option value="उशीरा">उशीरा</option>
+  </select>
+</div>
+
+<!-- दहा अर्थपूर्ण शद्ध बोलणे -->
+<div class="mb-3">
+  <label for="tenMeaningfulWords" class="form-label">दहा अर्थपूर्ण शद्ध बोलणे (दीड वर्षे)</label>
+  <select class="form-select" id="tenMeaningfulWords" name="ten_meaningful_words">
+    <option selected disabled>निवडा</option>
+    <option value="सर्वसाधारण">सर्वसाधारण</option>
+    <option value="उशीरा">उशीरा</option>
+  </select>
+</div>
+
+<!-- लहान वाक्य -->
+<div class="mb-3">
+  <label for="smallSentences" class="form-label">लहान वाक्य (२ वर्षे)</label>
+  <select class="form-select" id="smallSentences" name="small_sentences">
+    <option selected disabled>निवडा</option>
+    <option value="सर्वसाधारण">सर्वसाधारण</option>
+    <option value="उशीरा">उशीरा</option>
+  </select>
+</div>
+
+<!-- सफाईदार बोलणे -->
+<div class="mb-3">
+  <label for="clearSpeech" class="form-label">सफाईदार बोलणे (३ वर्षे)</label>
+  <select class="form-select" id="clearSpeech" name="clear_speech">
+    <option selected disabled>निवडा</option>
+    <option value="सर्वसाधारण">सर्वसाधारण</option>
+    <option value="उशीरा">उशीरा</option>
+  </select>
+</div>
+
+<!-- शी शू वर नियंत्रण -->
+<div class="mb-3">
+  <label for="toiletTrainingControl" class="form-label">शी शू वर नियंत्रण (३ ते साडेतीन वर्षे)</label>
+  <select class="form-select" id="toiletTrainingControl" name="toilet_training_control">
+    <option selected disabled>निवडा</option>
+    <option value="सर्वसाधारण">सर्वसाधारण</option>
+    <option value="उशीरा">उशीरा</option>
+  </select>
+</div>
+
+<hr class="my-4">
+
+<div class="mb-4">
+  <h4 class="mb-3">विभाग – ४ शालेय इतिहास</h4>
+
+  <div class="mb-3">
+    <label for="attendanceStatus" class="form-label">४.१ हजेरी / गैरहजर / धरसोड केली</label>
+    <select class="form-select" id="attendanceStatus" name="attendance_status">
+      <option selected disabled>निवडा</option>
+      <option value="हजेरी">हजेरी</option>
+      <option value="गैरहजर">गैरहजर</option>
+      <option value="धरसोड केली">धरसोड केली</option>
+    </select>
+  </div>
+
+  <div class="mb-3">
+    <label for="schoolType" class="form-label">४.२ शाळेचे स्वरुप</label>
+    <select class="form-select" id="schoolType" name="school_type">
+      <option selected disabled>निवडा</option>
+      <option value="सर्वसाधारण">सर्वसाधारण</option>
+      <option value="विशेष">विशेष</option>
+      <option value="एकात्मीत">एकात्मीत</option>
+      <option value="इतर">इतर</option>
+    </select>
+  </div>
+
+  <div class="mb-3">
+    <label for="schoolAddress" class="form-label">४.३ शाळेचा पत्ता</label>
+    <textarea class="form-control" id="schoolAddress" name="school_address" rows="2"></textarea>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col-md-6">
+      <label for="ageAtAdmission" class="form-label">४.४ शाळेत दाखल होताना वय</label>
+      <input type="number" class="form-control" id="ageAtAdmission" name="age_at_admission">
+    </div>
+    <div class="col-md-6">
+      <label for="classLevel" class="form-label">४.५ इयत्ता / पातळी गट</label>
+      <input type="text" class="form-control" id="classLevel" name="class_level">
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="regularity" class="form-label">४.६ शाळेतील हजेरी</label>
+    <select class="form-select" id="regularity" name="regularity">
+      <option selected disabled>निवडा</option>
+      <option value="नियमित">नियमित</option>
+      <option value="अनियमित">अनियमित</option>
+    </select>
+  </div>
+
+  <div class="mb-3">
+    <label for="irregularityReason" class="form-label">अनियमिततेचे कारण</label>
+    <select class="form-select" id="irregularityReason" name="irregularity_reason">
+      <option selected disabled>निवडा</option>
+      <option value="जात नाही">जात नाही</option>
+      <option value="भटकतो">भटकतो</option>
+      <option value="आर्थिक अडचण">आर्थिक अडचण</option>
+      <option value="भय वाटते">भय वाटते</option>
+      <option value="इतर">इतर</option>
+    </select>
+  </div>
+
+  <div class="mb-3">
+    <label for="schoolChange" class="form-label">४.७ शाळा बदलण्याची वारंवारिता व कारण</label>
+    <textarea class="form-control" id="schoolChange" name="school_change_reason" rows="2"></textarea>
+  </div>
+
+  <div class="mb-3">
+    <label for="activityPerformance" class="form-label">४.८ शालेय कृतीतील दर्जा</label>
+    <select class="form-select" id="activityPerformance" name="activity_performance">
+      <option selected disabled>निवडा</option>
+      <option value="चांगला">चांगला</option>
+      <option value="बरा">बरा</option>
+      <option value="सर्वसाधारण">सर्वसाधारण</option>
+      <option value="निकृष्ट">निकृष्ट</option>
+      <option value="नाकारण्याजोगा">नाकारण्याजोगा</option>
+    </select>
+  </div>
+  
+  <div class="mb-3">
+    <label for="peerAdjustment" class="form-label">४.९ समवयस्कांबरोबर समायोजन</label>
+    <select class="form-select" id="peerAdjustment" name="peer_adjustment">
+      <option selected disabled>निवडा</option>
+      <option value="योग्य">योग्य</option>
+      <option value="अयोग्य">अयोग्य</option>
+    </select>
+  </div>
+  
+  <div class="row mb-3">
+    <div class="col-md-6">
+      <label for="academicPerformance" class="form-label">४.१० अभ्यासातील कार्यमान</label>
+      <select class="form-select" id="academicPerformance" name="academic_performance">
+        <option selected disabled>निवडा</option>
+        <option value="चांगले">चांगले</option>
+        <option value="बरे">बरे</option>
+        <option value="निकृष्ट">निकृष्ट</option>
+        <option value="माहित नाही">माहित नाही</option>
+      </select>
+    </div>
+    <div class="col-md-6">
+      <label for="classBehavior" class="form-label">वर्गातील वर्तन</label>
+      <select class="form-select" id="classBehavior" name="class_behavior">
+        <option selected disabled>निवडा</option>
+        <option value="स्वीकार्य">स्वीकार्य</option>
+        <option value="अस्वीकार्य">अस्वीकार्य</option>
+        <option value="माहित नाही">माहित नाही</option>
+      </select>
+    </div>
+  </div>
+  
+  <div class="mb-3">
+    <label for="otherSchoolInfo" class="form-label">४.११ इतर माहिती</label>
+    <textarea class="form-control" id="otherSchoolInfo" name="other_school_info" rows="2"></textarea>
+  </div>  
+</div>
+<hr class="my-4">
+
+<div class="mb-4">
+  <h4 class="mb-3">विभाग – ५ : खेळ</h4>
+  <p class="form-text">(आई-वडील / पालकांकडून घ्यावयाची माहिती)</p>
+
+  <div class="mb-3">
+    <label for="playGeneral" class="form-label">५.१ सर्वसाधारण</label>
+    <textarea class="form-control" id="playGeneral" name="play_general" rows="2"></textarea>
+  </div>
+
+  <div class="mb-3">
+    <label for="playAloneOrGroup" class="form-label">५.२ अलिप्त राहतो / खेळतो</label>
+    <select class="form-select" id="playAloneOrGroup" name="play_alone_or_group">
+      <option selected disabled>निवडा</option>
+      <option value="मळमळीत राहतो">अलिप्त राहतो</option>
+      <option value="खेळतो">खेळतो</option>
+    </select>
+  </div>
+
+  <div class="mb-3">
+    <label for="playsFrequently" class="form-label">५.३ बऱ्याचदा खेळ खेळतो</label>
+    <select class="form-select" id="playsFrequently" name="plays_frequently">
+      <option selected disabled>निवडा</option>
+      <option value="होय">होय</option>
+      <option value="नाही">नाही</option>
+    </select>
+  </div>
+
+  <div class="mb-3">
+    <label for="playsWithAnimals" class="form-label">५.४ प्राण्याबरोबर खेळायला प्राधान्य देतो</label>
+    <select class="form-select" id="playsWithAnimals" name="plays_with_animals">
+      <option selected disabled>निवडा</option>
+      <option value="होय">होय</option>
+      <option value="नाही">नाही</option>
+    </select>
+  </div>
+
+  <div class="mb-3">
+    <label for="prefersPlayingAlone" class="form-label">५.५ एकटाच खेळण्याला प्राधान्य देतो</label>
+    <select class="form-select" id="prefersPlayingAlone" name="prefers_playing_alone">
+      <option selected disabled>निवडा</option>
+      <option value="होय">होय</option>
+      <option value="नाही">नाही</option>
+    </select>
+  </div>
+  
+  <div class="mb-3">
+    <label for="playWithWhom" class="form-label">५.६ कोणाबरोबर खेळतो?</label>
+    <select class="form-select" id="playWithWhom" name="plays_with">
+      <option selected disabled>निवडा</option>
+      <option value="मोठ्या वयाच्या मुलांबरोबर">मोठ्या वयाच्या मुलांबरोबर</option>
+      <option value="कमी वयाच्या मुलांबरोबर">कमी वयाच्या मुलांबरोबर</option>
+      <option value="समवयस्कांबरोबर">समवयस्कांबरोबर</option>
+      <option value="समूहात खेळताना समस्या निर्माण होतात">समूहात खेळताना समस्या निर्माण होतात</option>
+    </select>
+  </div>
+  
+
+  <div class="mb-3">
+    <label for="groupBehaviorDuringPlay" class="form-label">५.७ खेळाच्या वेळी समूहातील वर्तन</label>
+    <textarea class="form-control" id="groupBehaviorDuringPlay" name="group_behavior_during_play" rows="2"></textarea>
+  </div>
+
+  <div class="mb-3">
+    <label for="followsRules" class="form-label">५.८ खेळाचे नियम पाळतो का?</label>
+    <select class="form-select" id="followsRules" name="follows_rules">
+      <option selected disabled>निवडा</option>
+      <option value="होय">होय</option>
+      <option value="नाही">नाही</option>
+      <option value="कधी कधी">कधी कधी</option>
+    </select>
+  </div>
+
+  <div class="mb-3">
+    <label for="leisureActivities" class="form-label">५.९ फावल्या वेळातील कृती</label>
+    <textarea class="form-control" id="leisureActivities" name="leisure_activities" rows="2"></textarea>
+  </div>
+
+  <div class="mb-3">
+    <label for="preferredGames" class="form-label">५.१० विशेष प्राधान्य कोणत्या खेळास देतो?</label>
+    <input type="text" class="form-control" id="preferredGames" name="preferred_games">
+  </div>
+</div>
+
+<hr class="my-4">
+
+<div class="mb-4">
+  <h4 class="mb-3">विभाग – ६ : लैंगिक इतिहास</h4>
+
+  <div class="mb-3">
+    <label for="sexualHistoryDetails" class="form-label">सविस्तर तपशील</label>
+    <textarea class="form-control" id="sexualHistoryDetails" name="sexual_history_details" rows="4"></textarea>
+  </div>
+</div>
+
+<hr class="my-4">
+
+<div class="mb-4">
+  <h4 class="mb-3">विभाग – ७ : कौटुंबिक इतिहास</h4>
+
+  <div class="mb-3">
+    <label for="familyTree" class="form-label">७.१ वंशावळ तक्ता</label>
+    <textarea class="form-control" id="familyTree" name="family_tree" rows="4"></textarea>
+    <div class="form-text">(कृपया वंशावळ/फॅमिली ट्री तपशीलवार स्वरूपात लिहा)</div>
+  </div>
+</div>
+<div class="mb-3">
+  <label for="familyType" class="form-label">७.३ कुटुंबाचा प्रकार</label>
+  <select class="form-select" id="familyType" name="family_type">
+    <option selected disabled>निवडा</option>
+    <option value="एकत्र">एकत्र</option>
+    <option value="विभक्त">विभक्त</option>
+    <option value="दुभंगलेले">दुभंगलेले</option>
+  </select>
+</div>
+
+<div class="mb-3">
+  <label for="consanguineousMarriage" class="form-label">७.४ लग्न नात्यातील होते काय?</label>
+  <select class="form-select mb-2" id="consanguineousMarriage" name="consanguineous_marriage">
+    <option selected disabled>निवडा</option>
+    <option value="होय">होय</option>
+    <option value="नाही">नाही</option>
+  </select>
+  <input type="text" class="form-control" id="relationIfYes" name="relation_if_yes" placeholder="असल्यास नाते नमूद करा">
+</div>
+
+<div class="mb-3">
+  <label for="familyDisorders" class="form-label">
+    ७.५ कुटुंबात मनोविकारी, मतिमंदत्व असणारे, फिट्स येणारे किंवा इतर अपंग कोणी होते काय? तपशील द्या
+  </label>
+  <textarea class="form-control" id="familyDisorders" name="family_disorders_details" rows="4"></textarea>
+</div>
+
+<hr class="my-4">
+
+<div class="mb-4">
+  <h4 class="mb-3">विभाग – ८ : घरातील वातावरण</h4>
+
+  <div class="mb-3">
+    <label class="form-label">८.१ पालकांचा सहभाग</label>
+
+    <div class="mb-2">
+      <label for="careResponsibility" class="form-label">मतिमंद / मुकबधीर व्यक्तीच्या गरजांची दखल कोण घेते?</label>
+      <input type="text" class="form-control" id="careResponsibility" name="care_responsibility">
+    </div>
+
+    <div class="mb-2">
+      <label for="educationalResponsibility" class="form-label">शैक्षणिक गरजांकडे कोण लक्ष देते?</label>
+      <input type="text" class="form-control" id="educationalResponsibility" name="educational_responsibility">
+    </div>
+
+    <div class="mb-2">
+      <label for="leisureParticipation" class="form-label">खेळ व फावल्या वेळातील उपक्रमात कोण सहभागी होते?</label>
+      <input type="text" class="form-control" id="leisureParticipation" name="leisure_participation">
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">८.२ भौतिक वातावरण</label>
+
+    <div class="mb-2">
+      <label for="livingArrangement" class="form-label">मतिमंद व्यक्तीकरिता निवास व्यवस्था</label>
+      <select class="form-select" id="livingArrangement" name="living_arrangement">
+        <option selected disabled>निवडा</option>
+        <option value="स्वतःची स्वतंत्र खोली">स्वतःची स्वतंत्र खोली</option>
+        <option value="कुटुंबातील इतरांबरोबर राहतो">कुटुंबातील इतरांबरोबर राहतो</option>
+      </select>
+    </div>
+
+    <div class="mb-2">
+      <label for="roomCount" class="form-label">खोल्यांची संख्या</label>
+      <input type="number" class="form-control" id="roomCount" name="room_count" min="0">
+    </div>
+
+    <div class="mb-2">
+      <label for="timeSpentPercentage" class="form-label">कुटुंबातील व्यक्तीबरोबर वेळ घालविण्याची टक्केवारी / प्रमाण</label>
+      <input type="text" class="form-control" id="timeSpentPercentage" name="time_spent_percentage" placeholder="उदा. ७०%">
+    </div>
+
+    <div class="mb-2">
+      <label for="mainTimeSpentWith" class="form-label">नेमकी कोणती व्यक्ती मतिमंद व्यक्तीबरोबर जास्त वेळ खर्च करते?</label>
+      <input type="text" class="form-control" id="mainTimeSpentWith" name="main_time_spent_with">
+    </div>
+  </div>
+</div>
+<hr class="my-4">
+
+<div class="mb-4">
+  <h4 class="mb-3">विभाग – ९ : सामाजिक वातावरण</h4>
+
+  <div class="mb-3">
+    <label for="neighborhoodInteraction" class="form-label">९.१ शेजाऱ्यांबरोबर संबंध</label>
+    <div class="mb-2">
+      <label for="visitsToNeighbors" class="form-label">शेजाऱ्यांकडे जाणे येणे असते का?</label>
+      <select class="form-select" id="visitsToNeighbors" name="visits_to_neighbors">
+        <option selected disabled>निवडा</option>
+        <option value="होय">होय</option>
+        <option value="नाही">नाही</option>
+      </select>
+    </div>
+
+    <div class="mb-2">
+      <label for="neighborsVisitFamily" class="form-label">शेजारी या कुटुंबाकडे येतात का?</label>
+      <select class="form-select" id="neighborsVisitFamily" name="neighbors_visit_family">
+        <option selected disabled>निवडा</option>
+        <option value="होय">होय</option>
+        <option value="नाही">नाही</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="socialParticipation" class="form-label">९.२ या कुटुंबाचा सामाजिक / धार्मिक उपक्रमात सहभाग असतो का?</label>
+    <select class="form-select" id="socialParticipation" name="social_participation">
+      <option selected disabled>निवडा</option>
+      <option value="होय">होय</option>
+      <option value="नाही">नाही</option>
+    </select>
+  </div>
+
+  <div class="mb-3">
+    <label for="extendedFamilySupport" class="form-label">९.३ विस्तारित कुटुंबातील इतरांचे सहकार्य कितपत व कशाप्रकारे?</label>
+    <textarea class="form-control" id="extendedFamilySupport" name="extended_family_support" rows="3"></textarea>
+  </div>
+</div>
+<hr class="my-4">
+
+<div class="mb-4">
+  <h4 class="mb-3">विभाग – १० : मतिमंद / मूकबधीर व्यक्तीच्या संगोपनात येणाऱ्या समस्या</h4>
+  <div class="mb-3">
+    <label for="caretakingChallenges" class="form-label">संगोपनात येणाऱ्या समस्या</label>
+    <textarea class="form-control" id="caretakingChallenges" name="caretaking_challenges" rows="3"></textarea>
+  </div>
+</div>
+
+<hr class="my-4">
+
+<div class="mb-4">
+  <h4 class="mb-3">विभाग – ११ : मतिमंदत्व / मूकबधीर बद्दल गैरसमज व अंधश्रद्धा</h4>
+  <div class="mb-3">
+    <label for="misconceptions" class="form-label">गैरसमज / अंधश्रद्धा</label>
+    <textarea class="form-control" id="misconceptions" name="misconceptions" rows="3"></textarea>
+  </div>
+</div>
+
+<hr class="my-4">
+
+<div class="mb-4">
+  <h4 class="mb-3">विभाग – १२ : पालकांच्या अपेक्षा</h4>
+  <div class="mb-3">
+    <label for="parentExpectations" class="form-label">पालकांच्या अपेक्षा</label>
+    <textarea class="form-control" id="parentExpectations" name="parent_expectations" rows="3"></textarea>
+  </div>
+</div>
+
+
+</div>
+
+    
+
+
+
+
+      <button type="submit" class="btn btn-primary w-100 mt-3">सबमिट करा</button>
+    </form>
+  </div>
+
+   
+   
+            <!-- विभाग १३ -->
+            <h5 class="form-section-title">विभाग १३: शारिरीक तपासणी</h5>
+
+            <div class="mb-3">
+                <label for="generalExamination" class="form-label">१३.१ सर्वसाधारण तपासणी</label>
+                <textarea class="form-control" id="generalExamination" name="general_examination" rows="2"></textarea>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="weight" class="form-label">१३.२ वजन (किलोमध्ये)</label>
+                    <input type="number" class="form-control" id="weight" name="weight" step="0.1">
+                </div>
+                <div class="col-md-6">
+                    <label for="height" class="form-label">उंची (से.मी.)</label>
+                    <input type="number" class="form-control" id="height" name="height" step="0.1">
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="physicalDisabilities" class="form-label">१३.३ शारिरीक उपनग्नत्र असल्यास थोडक्यात वर्णन
+                    करा</label>
+                <textarea class="form-control" id="physicalDisabilities" name="physical_disabilities"
+                    rows="2"></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label for="blindDeaf" class="form-label">१३.४ अंधत्व / कर्णबधिरत्व</label>
+                <textarea class="form-control" id="blindDeaf" name="blind_deaf" rows="2"></textarea>
+            </div>
+
+            <!-- विभाग १४ -->
+            <h5 class="form-section-title">विभाग १४: मतीमंद / मूकबधिर व्यक्तीची मुलाखत आणि निरीक्षणाचे मुद्दे</h5>
+            <div class="mb-3">
+                <textarea class="form-control" id="interviewObservations" name="interview_observations"
+                    rows="3"></textarea>
+            </div>
+
+            <!-- विभाग १५ -->
+            <h5 class="form-section-title">विभाग १५: तात्पुरते निदान</h5>
+            <div class="mb-3">
+                <textarea class="form-control" id="provisionalDiagnosis" name="provisional_diagnosis"
+                    rows="3"></textarea>
+            </div>
+
+            <!-- विभाग १६ -->
+            <h5 class="form-section-title">विभाग १६: व्यवस्थापनाचा आराखडा / कार्यश्रमाचा आराखडा</h5>
+            <div class="mb-3">
+                <textarea class="form-control" id="managementPlan" name="management_plan" rows="3"></textarea>
+            </div>
+
+            <!-- तारीख आणि सही -->
+            <div class="row mb-4 mt-4">
+                <div class="col-md-6">
+                    <label for="date" class="form-label">तारीख</label>
+                    <input type="date" class="form-control" id="date" name="date">
+                </div>
+                <div class="col-md-6">
+                    <label for="signature" class="form-label">सही</label>
+                    <input type="text" class="form-control" id="signature" name="signature"
+                        placeholder="डॉक्टर/समुपदेशकाची सही">
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">सबमिट करा</button>
+            </div>
+        </form>
+    </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

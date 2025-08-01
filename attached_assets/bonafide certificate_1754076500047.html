@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="mr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>प्रतिनिधान प्रमाणपत्र</title>
+    <style>
+	body {
+    font-family: 'Noto Sans Devanagari', sans-serif;
+    background-color: #f4f9ff;
+    padding: 50px;
+}
+
+.certificate-box {
+    max-width: 850px;
+    margin: auto;
+    padding: 40px;
+    border: 4px double #2c3e50;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.school-name {
+    position: absolute;
+    top: 15px;
+    left: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+    margin-top: 40px;
+    color: #1a237e;
+    text-decoration: underline;
+}
+
+.certificate-box p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.footer {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    font-weight: bold;
+    font-size: 18px;
+}
+	</style>
+</head>
+
+<body>
+    <div class="certificate-box">
+
+        <!-- School Name in Top-Left Corner -->
+        <p class="school-name">शाळेचे नाव: संग्राम मुकबधीर विद्यालय</p>
+
+        <!-- Main Heading -->
+        <h1 class="title">प्रतिनिधान प्रमाणपत्र(Bonafite Certificate)</h1>
+
+        <!-- Certificate Content -->
+        <p>हा दाखला <strong><span id="name"></span></strong> या विद्यार्थ्याने आमच्या शाळेत <strong><span
+                    id="year"></span></strong> या शैक्षणिक वर्षात <strong><span id="std"></span></strong> इयत्तेत,
+            <strong><span id="div"></span></strong> तुकडीत प्रवेश घेतल्याचा पुरावा म्हणून देण्यात येत आहे.</p>
+
+        <p>त्याचे वर्तन <strong><span id="conduct"></span></strong> असून तो/ती <strong><span id="caste"></span></strong>
+            या जातीचा आहे/आहे.</p>
+
+        <p>त्याची जन्मतारीख <strong><span id="dob"></span></strong> असून जन्मस्थान <strong><span
+                    id="birthplace"></span></strong> आहे.</p>
+
+        <p>वरील माहिती आमच्या शाळेच्या नोंदीप्रमाणे खरी असून ती शाळेच्या रेकॉर्डमध्ये अस्तित्वात आहे.</p>
+
+        <p>हा दाखला <strong><span id="place"></span></strong> येथे देण्यात आला आहे. विद्यार्थी ID: <strong><span
+                    id="id"></span></strong></p>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>मुख्याध्यापक</p>
+            <p>शाळेचा शिक्का</p>
+        </div>
+
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        document.getElementById("name").textContent = urlParams.get("name");
+        document.getElementById("year").textContent = urlParams.get("year");
+        document.getElementById("std").textContent = urlParams.get("std");
+        document.getElementById("div").textContent = urlParams.get("div");
+        document.getElementById("conduct").textContent = urlParams.get("conduct");
+        document.getElementById("caste").textContent = urlParams.get("caste");
+        document.getElementById("dob").textContent = urlParams.get("dob");
+        document.getElementById("birthplace").textContent = urlParams.get("birthplace");
+        document.getElementById("place").textContent = urlParams.get("place");
+        document.getElementById("id").textContent = urlParams.get("id");
+    </script>
+</body>
+
+</html>
