@@ -8,6 +8,12 @@ Harmony Hands is a bilingual (Marathi/English) Student ERP system designed for e
 
 Preferred communication style: Simple, everyday language.
 
+## Recent Changes
+
+- **Student ID Range Updated**: Changed from STU001-STU300 to STU001-STU900 with duplicate prevention (August 2025)
+- **PDF Save Functionality**: Added "Save as PDF" buttons to all five forms before submit buttons (August 2025)
+- **Render Deployment Ready**: Created deployment files for Render hosting platform (August 2025)
+
 ## System Architecture
 
 ### Backend Architecture
@@ -66,6 +72,16 @@ Preferred communication style: Simple, everyday language.
 - **SQLite**: Default database (development)
 - **PostgreSQL**: Production database option via DATABASE_URL
 - **Connection Pooling**: SQLAlchemy engine options for production reliability
+
+## Deployment Configuration
+
+### Render Platform Support
+- **Requirements**: render_requirements.txt with all necessary Python dependencies
+- **Process Configuration**: Procfile for gunicorn web server setup
+- **Runtime**: Python 3.11.6 specified in runtime.txt
+- **Auto-deploy**: render.yaml for automatic service and database creation
+- **Environment Variables**: SESSION_SECRET, DATABASE_URL, FLASK_ENV configuration
+- **Documentation**: Complete deployment guide in DEPLOYMENT_GUIDE.md
 
 ### Development Tools
 - **Logging**: Python logging module with DEBUG level configuration
