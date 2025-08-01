@@ -1,0 +1,142 @@
+{% extends "base.html" %}
+
+{% block title %}Bonafide Form - Harmony Hands{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow">
+                <div class="card-header bg-success text-white text-center">
+                    <h3 class="mb-0">
+                        <i class="fas fa-certificate me-2"></i>
+                        प्रतिनिधान प्रमाणपत्र फॉर्म / Bonafide Certificate Form
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <p class="text-muted mb-4">शाळेचे नाव: संग्राम मुकबधीर विद्यालय</p>
+                    
+                    <form method="POST">
+                        {{ form.hidden_tag() }}
+                        
+                        <div class="mb-3">
+                            {{ form.student_name.label(class="form-label") }}
+                            {{ form.student_name(class="form-control") }}
+                            {% if form.student_name.errors %}
+                                <div class="text-danger">
+                                    {% for error in form.student_name.errors %}
+                                        <small>{{ error }}</small>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+                        
+                        <div class="mb-3">
+                            {{ form.academic_year.label(class="form-label") }}
+                            {{ form.academic_year(class="form-control") }}
+                            {% if form.academic_year.errors %}
+                                <div class="text-danger">
+                                    {% for error in form.academic_year.errors %}
+                                        <small>{{ error }}</small>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+                        
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                {{ form.class_standard.label(class="form-label") }}
+                                {{ form.class_standard(class="form-control") }}
+                                {% if form.class_standard.errors %}
+                                    <div class="text-danger">
+                                        {% for error in form.class_standard.errors %}
+                                            <small>{{ error }}</small>
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            </div>
+                            <div class="col-md-6">
+                                {{ form.division.label(class="form-label") }}
+                                {{ form.division(class="form-control") }}
+                                {% if form.division.errors %}
+                                    <div class="text-danger">
+                                        {% for error in form.division.errors %}
+                                            <small>{{ error }}</small>
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                        
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                {{ form.conduct.label(class="form-label") }}
+                                {{ form.conduct(class="form-control") }}
+                                {% if form.conduct.errors %}
+                                    <div class="text-danger">
+                                        {% for error in form.conduct.errors %}
+                                            <small>{{ error }}</small>
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            </div>
+                            <div class="col-md-6">
+                                {{ form.caste.label(class="form-label") }}
+                                {{ form.caste(class="form-control") }}
+                                {% if form.caste.errors %}
+                                    <div class="text-danger">
+                                        {% for error in form.caste.errors %}
+                                            <small>{{ error }}</small>
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                        
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                {{ form.birth_date.label(class="form-label") }}
+                                {{ form.birth_date(class="form-control") }}
+                                {% if form.birth_date.errors %}
+                                    <div class="text-danger">
+                                        {% for error in form.birth_date.errors %}
+                                            <small>{{ error }}</small>
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            </div>
+                            <div class="col-md-6">
+                                {{ form.birth_place.label(class="form-label") }}
+                                {{ form.birth_place(class="form-control") }}
+                                {% if form.birth_place.errors %}
+                                    <div class="text-danger">
+                                        {% for error in form.birth_place.errors %}
+                                            <small>{{ error }}</small>
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            {{ form.school_place.label(class="form-label") }}
+                            {{ form.school_place(class="form-control") }}
+                            {% if form.school_place.errors %}
+                                <div class="text-danger">
+                                    {% for error in form.school_place.errors %}
+                                        <small>{{ error }}</small>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+                        
+                        <div class="text-center">
+                            {{ form.submit(class="btn btn-success btn-lg") }}
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

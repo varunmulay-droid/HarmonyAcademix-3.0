@@ -1,0 +1,279 @@
+{% extends "base.html" %}
+
+{% block title %}Case Record Form - Harmony Hands{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <div class="card shadow">
+                <div class="card-header bg-warning text-dark text-center">
+                    <h3 class="mb-0">
+                        <i class="fas fa-folder-open me-2"></i>
+                        केस रेकॉर्ड फॉर्म / Case Record Form
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <form method="POST">
+                        <!-- Section 1: Basic Information -->
+                        <div class="section-title border-bottom mb-4 pb-2">
+                            <h4>विभाग - १: मूलभूत माहिती / Section 1: Basic Information</h4>
+                        </div>
+                        
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="name" class="form-label">१.१ नाव / Name</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="birth_date" class="form-label">१.२ जन्मतारीख / Date of Birth</label>
+                                <input type="date" class="form-control" id="birth_date" name="birth_date">
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="age" class="form-label">१.३ वय / Age</label>
+                                <input type="number" class="form-control" id="age" name="age">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="gender" class="form-label">१.४ लिंग / Gender</label>
+                                <select class="form-select" id="gender" name="gender">
+                                    <option value="">-- निवडा / Select --</option>
+                                    <option value="पुरुष">पुरुष / Male</option>
+                                    <option value="स्त्री">स्त्री / Female</option>
+                                    <option value="इतर">इतर / Other</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="education" class="form-label">१.५ शिक्षण / Education</label>
+                            <input type="text" class="form-control" id="education" name="education">
+                        </div>
+
+                        <!-- Father Information -->
+                        <div class="mb-4">
+                            <h6 class="border-bottom pb-2">१.६ वडिलांची माहिती / Father's Information</h6>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label for="father_name" class="form-label">नाव / Name</label>
+                                    <input type="text" class="form-control" id="father_name" name="father_name">
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="father_education" class="form-label">शिक्षण / Education</label>
+                                    <input type="text" class="form-control" id="father_education" name="father_education">
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="father_occupation" class="form-label">व्यवसाय / Occupation</label>
+                                    <input type="text" class="form-control" id="father_occupation" name="father_occupation">
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="father_income" class="form-label">उत्पन्न / Income</label>
+                                    <input type="text" class="form-control" id="father_income" name="father_income">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mother Information -->
+                        <div class="mb-4">
+                            <h6 class="border-bottom pb-2">१.७ आईची माहिती / Mother's Information</h6>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label for="mother_name" class="form-label">नाव / Name</label>
+                                    <input type="text" class="form-control" id="mother_name" name="mother_name">
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="mother_education" class="form-label">शिक्षण / Education</label>
+                                    <input type="text" class="form-control" id="mother_education" name="mother_education">
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="mother_occupation" class="form-label">व्यवसाय / Occupation</label>
+                                    <input type="text" class="form-control" id="mother_occupation" name="mother_occupation">
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="mother_income" class="form-label">उत्पन्न / Income</label>
+                                    <input type="text" class="form-control" id="mother_income" name="mother_income">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Guardian Information -->
+                        <div class="mb-4">
+                            <h6 class="border-bottom pb-2">१.८ पालकांची माहिती / Guardian's Information</h6>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label for="guardian_name" class="form-label">नाव / Name</label>
+                                    <input type="text" class="form-control" id="guardian_name" name="guardian_name">
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="guardian_education" class="form-label">शिक्षण / Education</label>
+                                    <input type="text" class="form-control" id="guardian_education" name="guardian_education">
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="guardian_occupation" class="form-label">व्यवसाय / Occupation</label>
+                                    <input type="text" class="form-control" id="guardian_occupation" name="guardian_occupation">
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="guardian_income" class="form-label">उत्पन्न / Income</label>
+                                    <input type="text" class="form-control" id="guardian_income" name="guardian_income">
+                                </div>
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col-md-6">
+                                    <label for="guardian_address" class="form-label">पालकांचा पत्ता / Guardian's Address</label>
+                                    <textarea class="form-control" id="guardian_address" name="guardian_address" rows="2"></textarea>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="guardian_mobile" class="form-label">मोबाइल क्रमांक / Mobile Number</label>
+                                    <input type="tel" class="form-control" id="guardian_mobile" name="guardian_mobile">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Address Information -->
+                        <div class="mb-3">
+                            <label for="relatives_address" class="form-label">१.९ नातेवाईकांचा पत्ता / Relatives Address</label>
+                            <textarea class="form-control" id="relatives_address" rows="2" name="relatives_address"></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="permanent_address" class="form-label">१.१० मूळ स्थायी पत्ता / Permanent Address</label>
+                            <textarea class="form-control" id="permanent_address" rows="2" name="permanent_address"></textarea>
+                        </div>
+
+                        <!-- Social Information -->
+                        <div class="row mb-3">
+                            <div class="col-md-4">
+                                <label class="form-label">१.११ कुटुंबाचा सामाजिक/आर्थिक स्तर / Economic Status</label>
+                                <select class="form-select" name="economic_status">
+                                    <option value="">निवडा / Select</option>
+                                    <option value="उच्च">उच्च / High</option>
+                                    <option value="मध्यम">मध्यम / Medium</option>
+                                    <option value="कनिष्ठ">कनिष्ठ / Low</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">१.१२ क्षेत्र प्रकार / Area Type</label>
+                                <select class="form-select" name="area_type">
+                                    <option value="">निवडा / Select</option>
+                                    <option value="शहरी">शहरी / Urban</option>
+                                    <option value="ग्रामीण">ग्रामीण / Rural</option>
+                                    <option value="निमशहरी">निमशहरी / Semi-Urban</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="religion" class="form-label">१.१३ धर्म / Religion</label>
+                                <input type="text" class="form-control" id="religion" name="religion">
+                            </div>
+                        </div>
+
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <label for="caste" class="form-label">१.१४ जात / Caste</label>
+                                <input type="text" class="form-control" id="caste" name="caste">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="mother_tongue" class="form-label">१.१५ मातृभाषा / Mother Tongue</label>
+                                <input type="text" class="form-control" id="mother_tongue" name="mother_tongue">
+                            </div>
+                        </div>
+
+                        <!-- Section 2: Informant Details -->
+                        <div class="section-title border-bottom mb-4 pb-2">
+                            <h4>विभाग – २: माहिती देणाऱ्याची माहिती / Section 2: Informant Details</h4>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="info_relation_personal" class="form-label">२.१ माहिती देणाऱ्याचे व्यक्तीशी संबंध / Informant's Relation</label>
+                            <input type="text" class="form-control" id="info_relation_personal" name="info_relation_personal">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="contact_duration" class="form-label">२.२ माहिती देणाऱ्याचे व्यक्तीशी संपर्काचा कालावधी / Contact Duration</label>
+                            <input type="text" class="form-control" id="contact_duration" name="contact_duration">
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="info_trustworthiness" class="form-label">२.३ माहितीची विश्वासार्हता / Information Reliability</label>
+                                <select class="form-select" id="info_trustworthiness" name="info_trustworthiness">
+                                    <option value="">निवडा / Select</option>
+                                    <option value="विश्वासार्ह">विश्वासार्ह / Reliable</option>
+                                    <option value="अविश्वासार्ह">अविश्वासार्ह / Unreliable</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="info_completeness" class="form-label">२.४ दिलेल्या माहितीत अपूर्णता / Information Completeness</label>
+                                <select class="form-select" id="info_completeness" name="info_completeness">
+                                    <option value="">निवडा / Select</option>
+                                    <option value="पूर्ण">पूर्ण / Complete</option>
+                                    <option value="अपूर्ण">अपूर्ण / Incomplete</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="complaint_details" class="form-label">२.५ व्यक्तीच्या तक्रारीचे स्वरूप / Complaint Details</label>
+                            <textarea class="form-control" id="complaint_details" name="complaint_details" rows="3"></textarea>
+                        </div>
+
+                        <!-- Previous Treatment Information -->
+                        <div class="mb-4">
+                            <h6 class="border-bottom pb-2">२.६ व्यक्तीवर झालेल्या पूर्वीच्या उपचारांची माहिती / Previous Treatment Information</h6>
+                            
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label for="past_treatment_medications" class="form-label">औषधे / Medications</label>
+                                    <select class="form-select" id="past_treatment_medications" name="past_treatment_medications">
+                                        <option value="">निवडा / Select</option>
+                                        <option value="घेतली">घेतली / Taken</option>
+                                        <option value="घेतली नाही">घेतली नाही / Not Taken</option>
+                                        <option value="चालू आहे">चालू आहे / Ongoing</option>
+                                        <option value="बंद केली">बंद केली / Stopped</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="past_treatment_professional" class="form-label">व्यवसायिक उपचार / Professional Treatment</label>
+                                    <select class="form-select" id="past_treatment_professional" name="past_treatment_professional">
+                                        <option value="">निवडा / Select</option>
+                                        <option value="वैद्यकीय">वैद्यकीय / Medical</option>
+                                        <option value="मानसोपचार">मानसोपचार / Psychological</option>
+                                        <option value="इतर">इतर / Other</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label for="past_treatment_physical" class="form-label">शारीरिक उपचार / Physical Treatment</label>
+                                    <select class="form-select" id="past_treatment_physical" name="past_treatment_physical">
+                                        <option value="">निवडा / Select</option>
+                                        <option value="झालेला आहे">झालेला आहे / Done</option>
+                                        <option value="झालेला नाही">झालेला नाही / Not Done</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="past_treatment_other" class="form-label">इतर / Other Treatment</label>
+                                    <select class="form-select" id="past_treatment_other" name="past_treatment_other">
+                                        <option value="">निवडा / Select</option>
+                                        <option value="झालेला आहे">झालेला आहे / Done</option>
+                                        <option value="झालेला नाही">झालेला नाही / Not Done</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-warning btn-lg">
+                                <i class="fas fa-save me-2"></i>केस रेकॉर्ड जमा करा / Submit Case Record
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block title %}Pratinidhan Form - Harmony Hands{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow">
+                <div class="card-header bg-danger text-white text-center">
+                    <h3 class="mb-0">
+                        <i class="fas fa-id-card me-2"></i>
+                        प्रतिनिधान प्रमाणपत्र फॉर्म / Pratinidhan Certificate Form
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <p class="text-muted mb-4">शाळेचे नाव: संग्राम मुकबधीर विद्यालय</p>
+                    
+                    <form method="POST">
+                        <div class="mb-3">
+                            <label for="student_name" class="form-label">विद्यार्थ्याचे पूर्ण नाव / Student's Full Name</label>
+                            <input type="text" class="form-control" id="student_name" name="student_name" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="academic_year" class="form-label">शैक्षणिक वर्ष / Academic Year</label>
+                            <input type="text" class="form-control" id="academic_year" name="academic_year" placeholder="उदा: 2024-25" required>
+                        </div>
+                        
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="class_standard" class="form-label">इयत्ता / Class</label>
+                                <input type="text" class="form-control" id="class_standard" name="class_standard" placeholder="उदा: 10वी" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="division" class="form-label">तुकडी / Division</label>
+                                <input type="text" class="form-control" id="division" name="division" placeholder="उदा: अ" required>
+                            </div>
+                        </div>
+                        
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="conduct" class="form-label">वर्तन / Conduct</label>
+                                <input type="text" class="form-control" id="conduct" name="conduct" placeholder="उदा: चांगले" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="caste" class="form-label">जात / Caste</label>
+                                <input type="text" class="form-control" id="caste" name="caste" required>
+                            </div>
+                        </div>
+                        
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="birth_date" class="form-label">जन्मतारीख / Date of Birth</label>
+                                <input type="date" class="form-control" id="birth_date" name="birth_date" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="birth_place" class="form-label">जन्मस्थान / Place of Birth</label>
+                                <input type="text" class="form-control" id="birth_place" name="birth_place" required>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="school_place" class="form-label">शाळेचे स्थळ / School Location</label>
+                            <input type="text" class="form-control" id="school_place" name="school_place" required>
+                        </div>
+                        
+                        <div class="alert alert-info">
+                            <i class="fas fa-info-circle me-2"></i>
+                            <strong>टीप / Note:</strong> सर्व माहिती भरल्यानंतर प्रतिनिधान प्रमाणपत्र तयार होईल. / After filling all information, the representative certificate will be generated.
+                        </div>
+                        
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-danger btn-lg">
+                                <i class="fas fa-certificate me-2"></i>प्रमाणपत्र तयार करा / Generate Certificate
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,198 @@
+{% extends "base.html" %}
+
+{% block title %}Student Dashboard - Harmony Hands{% endblock %}
+
+{% block content %}
+<div class="container">
+    <!-- Welcome Section -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="bg-primary text-white p-4 rounded">
+                <h2>स्वागत आहे, {{ current_user.full_name }}!</h2>
+                <p class="mb-0">
+                    विद्यार्थी ID: {{ current_user.student_id }} | 
+                    Welcome to your student dashboard
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Statistics Cards -->
+    <div class="row mb-4">
+        <div class="col-md-6 col-lg-2 mb-3">
+            <div class="card bg-primary text-white text-center">
+                <div class="card-body">
+                    <i class="fas fa-file-alt fa-2x mb-2"></i>
+                    <h5 class="card-title">{{ stats.admission_forms }}</h5>
+                    <p class="card-text">प्रवेश अर्ज</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-2 mb-3">
+            <div class="card bg-success text-white text-center">
+                <div class="card-body">
+                    <i class="fas fa-certificate fa-2x mb-2"></i>
+                    <h5 class="card-title">{{ stats.bonafide_forms }}</h5>
+                    <p class="card-text">बोनाफाइड</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-2 mb-3">
+            <div class="card bg-info text-white text-center">
+                <div class="card-body">
+                    <i class="fas fa-home fa-2x mb-2"></i>
+                    <h5 class="card-title">{{ stats.hostel_forms }}</h5>
+                    <p class="card-text">वसतिगृह</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-2 mb-3">
+            <div class="card bg-warning text-white text-center">
+                <div class="card-body">
+                    <i class="fas fa-folder-open fa-2x mb-2"></i>
+                    <h5 class="card-title">{{ stats.case_records }}</h5>
+                    <p class="card-text">केस रेकॉर्ड</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-2 mb-3">
+            <div class="card bg-danger text-white text-center">
+                <div class="card-body">
+                    <i class="fas fa-id-card fa-2x mb-2"></i>
+                    <h5 class="card-title">{{ stats.pratinidhan_forms }}</h5>
+                    <p class="card-text">प्रतिनिधान</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-2 mb-3">
+            <div class="card bg-secondary text-white text-center">
+                <div class="card-body">
+                    <i class="fas fa-clipboard-list fa-2x mb-2"></i>
+                    <h5 class="card-title">{{ stats.admission_forms + stats.bonafide_forms + stats.hostel_forms + stats.case_records + stats.pratinidhan_forms }}</h5>
+                    <p class="card-text">एकूण फॉर्म</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Actions -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <h4 class="mb-3">त्वरित क्रिया / Quick Actions</h4>
+        </div>
+        
+        <div class="col-md-6 col-lg-4 mb-3">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <i class="fas fa-file-alt fa-3x text-primary mb-3"></i>
+                    <h5 class="card-title">प्रवेश अर्ज</h5>
+                    <p class="card-text">नवीन प्रवेश अर्ज भरा</p>
+                    <a href="{{ url_for('admission_form') }}" class="btn btn-primary">अर्ज भरा</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-4 mb-3">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <i class="fas fa-certificate fa-3x text-success mb-3"></i>
+                    <h5 class="card-title">बोनाफाइड प्रमाणपत्र</h5>
+                    <p class="card-text">बोनाफाइड प्रमाणपत्र मिळवा</p>
+                    <a href="{{ url_for('bonafide_form') }}" class="btn btn-success">फॉर्म भरा</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-4 mb-3">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <i class="fas fa-home fa-3x text-info mb-3"></i>
+                    <h5 class="card-title">वसतिगृह अर्ज</h5>
+                    <p class="card-text">वसतिगृहासाठी अर्ज करा</p>
+                    <a href="{{ url_for('hostel_form') }}" class="btn btn-info">अर्ज करा</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-4 mb-3">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <i class="fas fa-folder-open fa-3x text-warning mb-3"></i>
+                    <h5 class="card-title">केस रेकॉर्ड</h5>
+                    <p class="card-text">केस रेकॉर्ड तयार करा</p>
+                    <a href="{{ url_for('case_record_form') }}" class="btn btn-warning">फॉर्म भरा</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-4 mb-3">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <i class="fas fa-id-card fa-3x text-danger mb-3"></i>
+                    <h5 class="card-title">प्रतिनिधान प्रमाणपत्र</h5>
+                    <p class="card-text">प्रतिनिधान प्रमाणपत्र मिळवा</p>
+                    <a href="{{ url_for('pratinidhan_form') }}" class="btn btn-danger">फॉर्म भरा</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recent Forms -->
+    {% if recent_forms %}
+    <div class="row">
+        <div class="col-12">
+            <h4 class="mb-3">अलीकडील फॉर्म / Recent Forms</h4>
+            <div class="card">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>फॉर्म प्रकार / Form Type</th>
+                                    <th>तारीख / Date</th>
+                                    <th>स्थिती / Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for form in recent_forms %}
+                                <tr>
+                                    <td>
+                                        {% if form.type == 'AdmissionForm' %}
+                                            <i class="fas fa-file-alt text-primary me-2"></i>प्रवेश अर्ज
+                                        {% elif form.type == 'BonafideForm' %}
+                                            <i class="fas fa-certificate text-success me-2"></i>बोनाफाइड प्रमाणपत्र
+                                        {% elif form.type == 'HostelForm' %}
+                                            <i class="fas fa-home text-info me-2"></i>वसतिगृह अर्ज
+                                        {% elif form.type == 'CaseRecord' %}
+                                            <i class="fas fa-folder-open text-warning me-2"></i>केस रेकॉर्ड
+                                        {% elif form.type == 'PratinidhanForm' %}
+                                            <i class="fas fa-id-card text-danger me-2"></i>प्रतिनिधान प्रमाणपत्र
+                                        {% endif %}
+                                    </td>
+                                    <td>{{ form.created_at.strftime('%d/%m/%Y %H:%M') }}</td>
+                                    <td>
+                                        {% if form.status == 'pending' %}
+                                            <span class="badge bg-warning">प्रलंबित / Pending</span>
+                                        {% elif form.status == 'approved' %}
+                                            <span class="badge bg-success">मंजूर / Approved</span>
+                                        {% elif form.status == 'rejected' %}
+                                            <span class="badge bg-danger">नाकारलेले / Rejected</span>
+                                        {% endif %}
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,205 @@
+{% extends "base.html" %}
+
+{% block title %}Admin - {{ form_type.title() }} Forms - Harmony Hands{% endblock %}
+
+{% block content %}
+<div class="container">
+    <!-- Header -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="bg-primary text-white p-4 rounded">
+                <h2>
+                    <i class="fas fa-cogs me-2"></i>
+                    {{ form_type.title() }} Forms Management
+                </h2>
+                <p class="mb-0">
+                    {% if form_type == 'admission' %}
+                        प्रवेश अर्ज व्यवस्थापन / Admission Forms Management
+                    {% elif form_type == 'bonafide' %}
+                        बोनाफाइड प्रमाणपत्र व्यवस्थापन / Bonafide Certificate Management  
+                    {% elif form_type == 'hostel' %}
+                        वसतिगृह अर्ज व्यवस्थापन / Hostel Application Management
+                    {% elif form_type == 'case_record' %}
+                        केस रेकॉर्ड व्यवस्थापन / Case Record Management
+                    {% elif form_type == 'pratinidhan' %}
+                        प्रतिनिधान प्रमाणपत्र व्यवस्थापन / Pratinidhan Certificate Management
+                    {% endif %}
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <nav aria-label="Form type navigation">
+                <div class="btn-group" role="group">
+                    <a href="{{ url_for('admin_forms', form_type='admission') }}" 
+                       class="btn btn-outline-primary {{ 'active' if form_type == 'admission' else '' }}">
+                        <i class="fas fa-file-alt me-2"></i>प्रवेश अर्ज
+                    </a>
+                    <a href="{{ url_for('admin_forms', form_type='bonafide') }}" 
+                       class="btn btn-outline-success {{ 'active' if form_type == 'bonafide' else '' }}">
+                        <i class="fas fa-certificate me-2"></i>बोनाफाइड
+                    </a>
+                    <a href="{{ url_for('admin_forms', form_type='hostel') }}" 
+                       class="btn btn-outline-info {{ 'active' if form_type == 'hostel' else '' }}">
+                        <i class="fas fa-home me-2"></i>वसतिगृह
+                    </a>
+                    <a href="{{ url_for('admin_forms', form_type='case_record') }}" 
+                       class="btn btn-outline-warning {{ 'active' if form_type == 'case_record' else '' }}">
+                        <i class="fas fa-folder-open me-2"></i>केस रेकॉर्ड
+                    </a>
+                    <a href="{{ url_for('admin_forms', form_type='pratinidhan') }}" 
+                       class="btn btn-outline-danger {{ 'active' if form_type == 'pratinidhan' else '' }}">
+                        <i class="fas fa-id-card me-2"></i>प्रतिनिधान
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Forms Table -->
+    {% if forms %}
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-list me-2"></i>
+                        सर्व {{ form_type.title() }} Forms ({{ forms|length }})
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>ID</th>
+                                    <th>विद्यार्थी / Student</th>
+                                    <th>विद्यार्थी ID</th>
+                                    {% if form_type == 'admission' %}
+                                        <th>शाळेचे नाव</th>
+                                        <th>प्रवेश इयत्ता</th>
+                                    {% elif form_type == 'bonafide' %}
+                                        <th>इयत्ता</th>
+                                        <th>तुकडी</th>
+                                    {% elif form_type == 'hostel' %}
+                                        <th>वसतिगृह</th>
+                                        <th>पालक</th>
+                                    {% elif form_type == 'case_record' %}
+                                        <th>वय</th>
+                                        <th>लिंग</th>
+                                    {% elif form_type == 'pratinidhan' %}
+                                        <th>इयत्ता</th>
+                                        <th>शैक्षणिक वर्ष</th>
+                                    {% endif %}
+                                    <th>तारीख / Date</th>
+                                    <th>स्थिती / Status</th>
+                                    <th>क्रिया / Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for form in forms %}
+                                <tr>
+                                    <td>{{ form.id }}</td>
+                                    <td>
+                                        <strong>{{ form.student.full_name }}</strong>
+                                        <br><small class="text-muted">{{ form.student.email }}</small>
+                                    </td>
+                                    <td>
+                                        <span class="badge bg-secondary">{{ form.student.student_id }}</span>
+                                    </td>
+                                    {% if form_type == 'admission' %}
+                                        <td>{{ form.school_name or '-' }}</td>
+                                        <td>{{ form.admission_class or '-' }}</td>
+                                    {% elif form_type == 'bonafide' %}
+                                        <td>{{ form.class_standard or '-' }}</td>
+                                        <td>{{ form.division or '-' }}</td>
+                                    {% elif form_type == 'hostel' %}
+                                        <td>{{ form.hostel_name or '-' }}</td>
+                                        <td>{{ form.parent_name or '-' }}</td>
+                                    {% elif form_type == 'case_record' %}
+                                        <td>{{ form.age or '-' }}</td>
+                                        <td>{{ form.gender or '-' }}</td>
+                                    {% elif form_type == 'pratinidhan' %}
+                                        <td>{{ form.class_standard or '-' }}</td>
+                                        <td>{{ form.academic_year or '-' }}</td>
+                                    {% endif %}
+                                    <td>{{ form.created_at.strftime('%d/%m/%Y %H:%M') }}</td>
+                                    <td>
+                                        {% if form.status == 'pending' %}
+                                            <span class="badge bg-warning">प्रलंबित / Pending</span>
+                                        {% elif form.status == 'approved' %}
+                                            <span class="badge bg-success">मंजूर / Approved</span>
+                                        {% elif form.status == 'rejected' %}
+                                            <span class="badge bg-danger">नाकारलेले / Rejected</span>
+                                        {% endif %}
+                                    </td>
+                                    <td>
+                                        <div class="btn-group btn-group-sm" role="group">
+                                            <!-- Status Update Form -->
+                                            <form method="POST" action="{{ url_for('update_form_status', form_type=form_type, form_id=form.id) }}" class="d-inline">
+                                                <select name="status" class="form-select form-select-sm" onchange="this.form.submit()">
+                                                    <option value="pending" {{ 'selected' if form.status == 'pending' else '' }}>Pending</option>
+                                                    <option value="approved" {{ 'selected' if form.status == 'approved' else '' }}>Approved</option>
+                                                    <option value="rejected" {{ 'selected' if form.status == 'rejected' else '' }}>Rejected</option>
+                                                </select>
+                                            </form>
+                                            
+                                            {% if form_type == 'bonafide' %}
+                                                <a href="{{ url_for('bonafide_certificate', form_id=form.id) }}" 
+                                                   class="btn btn-outline-success btn-sm" title="View Certificate">
+                                                    <i class="fas fa-certificate"></i>
+                                                </a>
+                                            {% endif %}
+                                        </div>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% else %}
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body text-center py-5">
+                    <i class="fas fa-inbox fa-3x text-muted mb-3"></i>
+                    <h5 class="text-muted">कोणतेही {{ form_type.title() }} Forms आढळले नाहीत</h5>
+                    <p class="text-muted">No {{ form_type.title() }} forms found</p>
+                    <a href="{{ url_for('admin_dashboard') }}" class="btn btn-primary">
+                        <i class="fas fa-arrow-left me-2"></i>Admin Dashboard वर परत जा
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+</div>
+
+<script>
+// Auto-refresh page every 30 seconds
+setTimeout(function() {
+    window.location.reload();
+}, 30000);
+
+// Confirmation for status changes
+document.addEventListener('DOMContentLoaded', function() {
+    const forms = document.querySelectorAll('form select[name="status"]');
+    forms.forEach(function(select) {
+        select.addEventListener('change', function() {
+            if (!confirm('Are you sure you want to change the status?')) {
+                // Reset to previous value
+                this.value = this.defaultValue;
+                return false;
+            }
+        });
+    });
+});
+</script>
+{% endblock %}

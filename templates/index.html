@@ -1,0 +1,147 @@
+{% extends "base.html" %}
+
+{% block title %}Harmony Hands - Student ERP System{% endblock %}
+
+{% block content %}
+<div class="container">
+    <!-- Hero Section -->
+    <div class="row mb-5">
+        <div class="col-lg-8 mx-auto text-center">
+            <h1 class="display-4 mb-4">
+                <i class="fas fa-graduation-cap text-primary me-3"></i>
+                Harmony Hands
+            </h1>
+            <h2 class="h3 mb-4">विद्यार्थी व्यवस्थापन प्रणाली</h2>
+            <p class="lead mb-4">
+                शैक्षणिक संस्थांसाठी संपूर्ण ERP समाधान - प्रवेश अर्ज, प्रमाणपत्रे, वसतिगृह अर्ज आणि अधिक
+            </p>
+            <p class="text-muted mb-4">
+                Comprehensive ERP solution for educational institutions - Admission forms, certificates, hostel applications and more
+            </p>
+            
+            {% if not current_user.is_authenticated %}
+                <div class="d-flex gap-3 justify-content-center">
+                    <a href="{{ url_for('register') }}" class="btn btn-primary btn-lg">
+                        <i class="fas fa-user-plus me-2"></i>नोंदणी करा / Register
+                    </a>
+                    <a href="{{ url_for('login') }}" class="btn btn-outline-primary btn-lg">
+                        <i class="fas fa-sign-in-alt me-2"></i>प्रवेश करा / Login
+                    </a>
+                </div>
+            {% else %}
+                <div class="d-flex gap-3 justify-content-center">
+                    {% if current_user.is_admin %}
+                        <a href="{{ url_for('admin_dashboard') }}" class="btn btn-primary btn-lg">
+                            <i class="fas fa-tachometer-alt me-2"></i>Admin Dashboard
+                        </a>
+                    {% else %}
+                        <a href="{{ url_for('student_dashboard') }}" class="btn btn-primary btn-lg">
+                            <i class="fas fa-tachometer-alt me-2"></i>Student Dashboard
+                        </a>
+                    {% endif %}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <h3 class="text-center mb-5">मुख्य वैशिष्ट्ये / Key Features</h3>
+        </div>
+        
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100 text-center">
+                <div class="card-body">
+                    <i class="fas fa-file-alt fa-3x text-primary mb-3"></i>
+                    <h5 class="card-title">प्रवेश अर्ज</h5>
+                    <p class="card-text">शाळेत प्रवेशासाठी संपूर्ण अर्ज फॉर्म</p>
+                    <small class="text-muted">Admission Forms</small>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100 text-center">
+                <div class="card-body">
+                    <i class="fas fa-certificate fa-3x text-success mb-3"></i>
+                    <h5 class="card-title">बोनाफाइड प्रमाणपत्र</h5>
+                    <p class="card-text">विद्यार्थ्यांसाठी प्रमाणपत्र निर्मिती</p>
+                    <small class="text-muted">Bonafide Certificates</small>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100 text-center">
+                <div class="card-body">
+                    <i class="fas fa-home fa-3x text-info mb-3"></i>
+                    <h5 class="card-title">वसतिगृह अर्ज</h5>
+                    <p class="card-text">वसतिगृहात प्रवेशासाठी अर्ज</p>
+                    <small class="text-muted">Hostel Applications</small>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100 text-center">
+                <div class="card-body">
+                    <i class="fas fa-folder-open fa-3x text-warning mb-3"></i>
+                    <h5 class="card-title">केस रेकॉर्ड</h5>
+                    <p class="card-text">विद्यार्थ्यांच्या केस रेकॉर्डचे व्यवस्थापन</p>
+                    <small class="text-muted">Case Records</small>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100 text-center">
+                <div class="card-body">
+                    <i class="fas fa-id-card fa-3x text-danger mb-3"></i>
+                    <h5 class="card-title">प्रतिनिधान प्रमाणपत्र</h5>
+                    <p class="card-text">प्रतिनिधान प्रमाणपत्र निर्मिती</p>
+                    <small class="text-muted">Representative Certificates</small>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100 text-center">
+                <div class="card-body">
+                    <i class="fas fa-users fa-3x text-purple mb-3"></i>
+                    <h5 class="card-title">विद्यार्थी व्यवस्थापन</h5>
+                    <p class="card-text">संपूर्ण विद्यार्थी डेटाबेस व्यवस्थापन</p>
+                    <small class="text-muted">Student Management</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Benefits Section -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="bg-light p-4 rounded">
+                <h4 class="text-center mb-4">फायदे / Benefits</h4>
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>द्विभाषिक समर्थन (मराठी व इंग्रजी)</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>स्वयंचलित विद्यार्थी ID निर्मिती</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>सुरक्षित फाइल अपलोड</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>रीअल-टाइम स्टॅटिस्टिक्स</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Bilingual support (Marathi & English)</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Automatic student ID generation</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Secure file uploads</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Real-time statistics</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

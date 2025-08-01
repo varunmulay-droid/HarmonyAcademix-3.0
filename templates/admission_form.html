@@ -1,0 +1,213 @@
+{% extends "base.html" %}
+
+{% block title %}Admission Form - Harmony Hands{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white text-center">
+                    <h3 class="mb-0">
+                        <i class="fas fa-file-alt me-2"></i>
+                        शाळा प्रवेश अर्ज / School Admission Form
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <form method="POST" enctype="multipart/form-data">
+                        {{ form.hidden_tag() }}
+                        
+                        <!-- School Information Section -->
+                        <div class="section-title border-bottom mb-4 pb-2">
+                            <h4>विद्यार्थी आणि शाळेची माहिती / Student and School Information</h4>
+                        </div>
+                        
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                {{ form.school_name.label(class="form-label") }}
+                                {{ form.school_name(class="form-control") }}
+                            </div>
+                            <div class="col-md-3">
+                                {{ form.continuous_student_id.label(class="form-label") }}
+                                {{ form.continuous_student_id(class="form-control") }}
+                            </div>
+                            <div class="col-md-3">
+                                {{ form.udise_pen.label(class="form-label") }}
+                                {{ form.udise_pen(class="form-control") }}
+                            </div>
+                        </div>
+                        
+                        <div class="row mb-3">
+                            <div class="col-md-4">
+                                {{ form.admission_class.label(class="form-label") }}
+                                {{ form.admission_class(class="form-control") }}
+                            </div>
+                            <div class="col-md-4">
+                                {{ form.birth_register_no.label(class="form-label") }}
+                                {{ form.birth_register_no(class="form-control") }}
+                            </div>
+                            <div class="col-md-4">
+                                {{ form.aadhaar_no.label(class="form-label") }}
+                                {{ form.aadhaar_no(class="form-control") }}
+                            </div>
+                        </div>
+                        
+                        <div class="row mb-3">
+                            <div class="col-md-4">
+                                {{ form.birth_date.label(class="form-label") }}
+                                {{ form.birth_date(class="form-control") }}
+                            </div>
+                            <div class="col-md-4">
+                                {{ form.admission_date.label(class="form-label") }}
+                                {{ form.admission_date(class="form-control") }}
+                            </div>
+                            <div class="col-md-4">
+                                {{ form.gender.label(class="form-label") }}
+                                {{ form.gender(class="form-control") }}
+                            </div>
+                        </div>
+                        
+                        <!-- Photos Section -->
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                {{ form.student_photo.label(class="form-label") }}
+                                {{ form.student_photo(class="form-control") }}
+                            </div>
+                            <div class="col-md-6">
+                                {{ form.parent_photo.label(class="form-label") }}
+                                {{ form.parent_photo(class="form-control") }}
+                            </div>
+                        </div>
+                        
+                        <!-- Student Name Section -->
+                        <div class="section-title border-bottom mb-4 pb-2">
+                            <h4>विद्यार्थ्याचे नाव / Student Name</h4>
+                        </div>
+                        
+                        <div class="row mb-3">
+                            <div class="col-md-3">
+                                {{ form.first_name_marathi.label(class="form-label") }}
+                                {{ form.first_name_marathi(class="form-control") }}
+                            </div>
+                            <div class="col-md-3">
+                                {{ form.last_name_marathi.label(class="form-label") }}
+                                {{ form.last_name_marathi(class="form-control") }}
+                            </div>
+                            <div class="col-md-3">
+                                {{ form.father_name.label(class="form-label") }}
+                                {{ form.father_name(class="form-control") }}
+                            </div>
+                            <div class="col-md-3">
+                                {{ form.mother_name.label(class="form-label") }}
+                                {{ form.mother_name(class="form-control") }}
+                            </div>
+                        </div>
+                        
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                {{ form.birth_date_words.label(class="form-label") }}
+                                {{ form.birth_date_words(class="form-control") }}
+                            </div>
+                            <div class="col-md-6">
+                                {{ form.religion.label(class="form-label") }}
+                                {{ form.religion(class="form-control") }}
+                            </div>
+                        </div>
+                        
+                        <!-- Caste and Additional Information -->
+                        <div class="row mb-3">
+                            <div class="col-md-3">
+                                {{ form.caste.label(class="form-label") }}
+                                {{ form.caste(class="form-control") }}
+                            </div>
+                            <div class="col-md-3">
+                                {{ form.sub_caste.label(class="form-label") }}
+                                {{ form.sub_caste(class="form-control") }}
+                            </div>
+                            <div class="col-md-3">
+                                {{ form.caste_certificate.label(class="form-label") }}
+                                {{ form.caste_certificate(class="form-control") }}
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">अल्पसंख्याक / Minority</label>
+                                <div class="form-check">
+                                    {{ form.is_minority(class="form-check-input") }}
+                                    {{ form.is_minority.label(class="form-check-label") }}
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row mb-3">
+                            <div class="col-md-4">
+                                {{ form.nationality.label(class="form-label") }}
+                                {{ form.nationality(class="form-control") }}
+                            </div>
+                            <div class="col-md-4">
+                                {{ form.mother_tongue.label(class="form-label") }}
+                                {{ form.mother_tongue(class="form-control") }}
+                            </div>
+                            <div class="col-md-4">
+                                {{ form.mobile_number.label(class="form-label") }}
+                                {{ form.mobile_number(class="form-control") }}
+                            </div>
+                        </div>
+                        
+                        <!-- BPL and Disability Status -->
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label class="form-label">BPL स्थिती / BPL Status</label>
+                                <div class="d-flex align-items-center">
+                                    <div class="form-check me-3">
+                                        {{ form.bpl_status(class="form-check-input") }}
+                                        {{ form.bpl_status.label(class="form-check-label") }}
+                                    </div>
+                                    {{ form.bpl_number(class="form-control", placeholder="BPL क्रमांक") }}
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">दिव्यांग स्थिती / Disability Status</label>
+                                <div class="d-flex align-items-center">
+                                    <div class="form-check me-3">
+                                        {{ form.disability_status(class="form-check-input") }}
+                                        {{ form.disability_status.label(class="form-check-label") }}
+                                    </div>
+                                    {{ form.disability_type(class="form-control", placeholder="दिव्यांग प्रकार") }}
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Parent and Address Information -->
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                {{ form.parent_full_name.label(class="form-label") }}
+                                {{ form.parent_full_name(class="form-control") }}
+                            </div>
+                        </div>
+                        
+                        <div class="row mb-4">
+                            <div class="col-md-12">
+                                {{ form.address.label(class="form-label") }}
+                                {{ form.address(class="form-control", rows="3") }}
+                            </div>
+                        </div>
+                        
+                        <!-- Confirmation -->
+                        <div class="mb-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="confirmationCheck" required>
+                                <label class="form-check-label" for="confirmationCheck">
+                                    वरील नमूद केलेली सर्व माहिती बरोबर असून मी ती स्वतः दिली आहे. तसेच रजिस्टर नंबर व त्या नंतर देण्यात आलेली माहिती खरीखुरी आहे.
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center">
+                            {{ form.submit(class="btn btn-primary btn-lg") }}
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,183 @@
+{% extends "base.html" %}
+
+{% block title %}Hostel Form - Harmony Hands{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <div class="card shadow">
+                <div class="card-header bg-info text-white text-center">
+                    <h3 class="mb-0">
+                        <i class="fas fa-home me-2"></i>
+                        वसतिगृह प्रवेश अर्ज / Hostel Admission Form
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <form method="POST" enctype="multipart/form-data">
+                        <!-- Basic Information -->
+                        <div class="mb-4">
+                            <label class="form-label">माननीय अधीक्षक,</label>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="text" name="hostel_name" class="form-control" placeholder="वसतिगृह नाव">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" name="hostel_address" class="form-control" placeholder="पत्ता">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">अर्जदार (पालकांचे नाव):</label>
+                            <input type="text" name="parent_name" class="form-control" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">पत्ता:</label>
+                            <textarea name="parent_address" class="form-control" rows="2" required></textarea>
+                        </div>
+                        
+                        <!-- Student Information -->
+                        <h4 class="border-bottom pb-2 mb-3">मुलाची / मुलीची माहिती / Student Information</h4>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">१) संपूर्ण नाव:</label>
+                            <input type="text" name="student_name" class="form-control" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">२) संपूर्ण पत्ता:</label>
+                            <textarea name="student_address" class="form-control" rows="2" required></textarea>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">३) फोन नं.:</label>
+                            <input type="tel" name="phone" class="form-control">
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">४) जात व पोटजात:</label>
+                            <input type="text" name="caste" class="form-control">
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">५) जन्म ठिकाण:</label>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <input type="text" name="birth_village" class="form-control" placeholder="मु.">
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="text" name="birth_taluka" class="form-control" placeholder="ता.">
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="text" name="birth_district" class="form-control" placeholder="जि.">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">६) जन्म तारीख:</label>
+                            <input type="date" name="birth_date" class="form-control">
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">७) वय चालू:</label>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="number" name="age_years" class="form-control" placeholder="वर्षे">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="number" name="age_months" class="form-control" placeholder="महिने">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">८) शिक्षण:</label>
+                            <input type="text" name="education" class="form-control">
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">९) पूर्वी शिकत असलेल्या शाळेचे नाव व पत्ता:</label>
+                            <textarea name="previous_school" class="form-control" rows="2"></textarea>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">१०) पालकांचे वार्षिक उत्पन्न:</label>
+                            <input type="text" name="annual_income" class="form-control">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label class="form-label">११) मागील तीन वर्षांच्या परीक्षांचा निकाल:</label>
+                            <textarea name="exam_results" class="form-control" rows="3"></textarea>
+                        </div>
+                        
+                        <!-- Agreements -->
+                        <h4 class="border-bottom pb-2 mb-3">पालकांनी भरून द्यावयाचे करार-पत्र / Parent Agreement</h4>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">पालकांचे नाव:</label>
+                            <input type="text" name="guardian_name" class="form-control">
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">पालकांची सही:</label>
+                            <input type="file" name="parent_signature" class="form-control" accept="image/*">
+                        </div>
+                        
+                        <h4 class="border-bottom pb-2 mb-3">विद्यार्थ्याची सही / Student Signature</h4>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">विद्यार्थ्याची सही:</label>
+                            <input type="file" name="student_signature" class="form-control" accept="image/*">
+                        </div>
+                        
+                        <!-- Administrative Section -->
+                        <h4 class="border-bottom pb-2 mb-3">वसतिगृह व्यवस्थापकांनी भरावयाचे / Administrative Section</h4>
+                        
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label class="form-label">रजिस्टर नंबर:</label>
+                                <input type="text" name="register_number" class="form-control">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">मिळाली तारीख:</label>
+                                <input type="date" name="received_date" class="form-control">
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label class="form-label">अधीक्षक स्वाक्षरी:</label>
+                            <input type="file" name="warden_signature" class="form-control" accept="image/*">
+                        </div>
+                        
+                        <!-- Rules Section -->
+                        <div class="border-top pt-4">
+                            <h4 class="mb-3">वसतिगृहाचे नियम / Hostel Rules</h4>
+                            <ol class="list-group list-group-numbered">
+                                <li class="list-group-item">संस्थेच्या परवानगीशिवाय अनुपस्थित राहता येणार नाही.</li>
+                                <li class="list-group-item">संस्थेच्या संमतीशिवाय वसतिगृहात प्रवेश मिळणार नाही.</li>
+                                <li class="list-group-item">वसतिगृह नियमांचे काटेकोर पालन करणे बंधनकारक आहे.</li>
+                                <li class="list-group-item">शांतता, स्वच्छता, आणि शिस्त राखावी लागेल.</li>
+                                <li class="list-group-item">वसतिगृह प्रवेशानंतर अन्य संस्थेत प्रवेश घेतल्यास प्रवेश रद्द होईल.</li>
+                                <li class="list-group-item">स्वतंत्रपणे राहण्यास परवानगी नाही.</li>
+                                <li class="list-group-item">सर्व परीक्षा उपस्थित राहणे बंधनकारक आहे.</li>
+                                <li class="list-group-item">खोली व्यवस्थापनाच्या सूचनेनुसार बदली जाईल.</li>
+                                <li class="list-group-item">वर्तन सुसंगत ठेवणे आवश्यक आहे.</li>
+                                <li class="list-group-item">प्रशासनाच्या नविन नियमांचे पालन करावे लागेल.</li>
+                            </ol>
+                        </div>
+                        
+                        <div class="text-center mt-4">
+                            <button type="submit" class="btn btn-info btn-lg">
+                                <i class="fas fa-paper-plane me-2"></i>अर्ज जमा करा / Submit Application
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block title %}Bonafide Certificate - Harmony Hands{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="certificate-box bg-white p-5 border rounded shadow">
+        <div class="school-name position-absolute top-0 start-0 p-3">
+            <strong>शाळेचे नाव: संग्राम मुकबधीर विद्यालय</strong>
+        </div>
+        
+        <div class="text-center mb-5 mt-4">
+            <h1 class="title text-primary text-decoration-underline">
+                प्रतिनिधान प्रमाणपत्र (Bonafide Certificate)
+            </h1>
+        </div>
+        
+        <div class="certificate-content" style="font-size: 18px; line-height: 1.8;">
+            <p>
+                हा दाखला <strong>{{ bonafide.student_name }}</strong> या विद्यार्थ्याने आमच्या शाळेत 
+                <strong>{{ bonafide.academic_year }}</strong> या शैक्षणिक वर्षात 
+                <strong>{{ bonafide.class_standard }}</strong> इयत्तेत,
+                <strong>{{ bonafide.division }}</strong> तुकडीत प्रवेश घेतल्याचा पुरावा म्हणून देण्यात येत आहे.
+            </p>
+            
+            <p>
+                त्याचे वर्तन <strong>{{ bonafide.conduct }}</strong> असून तो/ती 
+                <strong>{{ bonafide.caste }}</strong> या जातीचा आहे/आहे.
+            </p>
+            
+            <p>
+                त्याची जन्मतारीख <strong>{{ bonafide.birth_date.strftime('%d/%m/%Y') }}</strong> असून 
+                जन्मस्थान <strong>{{ bonafide.birth_place }}</strong> आहे.
+            </p>
+            
+            <p>
+                वरील माहिती आमच्या शाळेच्या नोंदीप्रमाणे खरी असून ती शाळेच्या रेकॉर्डमध्ये अस्तित्वात आहे.
+            </p>
+            
+            <p>
+                हा दाखला <strong>{{ bonafide.school_place }}</strong> येथे देण्यात आला आहे. 
+                विद्यार्थी ID: <strong>{{ student.student_id }}</strong>
+            </p>
+        </div>
+        
+        <div class="footer d-flex justify-content-between mt-5 pt-4" style="font-weight: bold; font-size: 18px;">
+            <div>मुख्याध्यापक</div>
+            <div>शाळेचा शिक्का</div>
+        </div>
+    </div>
+    
+    <div class="text-center mt-4">
+        <button class="btn btn-primary me-2" onclick="window.print()">
+            <i class="fas fa-print me-2"></i>Print Certificate
+        </button>
+        <a href="{{ url_for('student_dashboard') }}" class="btn btn-secondary">
+            <i class="fas fa-arrow-left me-2"></i>Back to Dashboard
+        </a>
+    </div>
+</div>
+
+<style>
+@media print {
+    .navbar, .footer, .btn, .text-center:last-child {
+        display: none !important;
+    }
+    
+    .certificate-box {
+        box-shadow: none !important;
+        border: 4px double #2c3e50 !important;
+    }
+}
+</style>
+{% endblock %}

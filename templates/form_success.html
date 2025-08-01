@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block title %}Form Submitted Successfully - Harmony Hands{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow border-success">
+                <div class="card-header bg-success text-white text-center">
+                    <h3 class="mb-0">
+                        <i class="fas fa-check-circle me-2"></i>
+                        यशस्वी सबमिशन / Successful Submission
+                    </h3>
+                </div>
+                <div class="card-body text-center">
+                    <div class="mb-4">
+                        <i class="fas fa-check-circle text-success" style="font-size: 64px;"></i>
+                    </div>
+                    
+                    <h4 class="text-success mb-3">{{ form_name }} यशस्वीरित्या जमा झाला!</h4>
+                    <p class="lead mb-3">Your {{ form_name }} has been submitted successfully!</p>
+                    
+                    <div class="alert alert-success" role="alert">
+                        <h6 class="alert-heading">
+                            <i class="fas fa-info-circle me-2"></i>
+                            महत्वाची माहिती / Important Information
+                        </h6>
+                        <p class="mb-1">
+                            <strong>Form ID:</strong> {{ form_id }}<br>
+                            <strong>Form Type:</strong> {{ form_type.title() }}<br>
+                            <strong>Status:</strong> <span class="badge bg-warning">प्रलंबित / Pending</span>
+                        </p>
+                        <hr>
+                        <p class="mb-0">
+                            तुमचा अर्ज पुनरावलोकनासाठी पाठविला गेला आहे. तुम्हाला लवकरच अपडेट मिळेल.<br>
+                            <small>Your application has been sent for review. You will receive an update soon.</small>
+                        </p>
+                    </div>
+                    
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                        <a href="{{ url_for('student_dashboard') }}" class="btn btn-primary">
+                            <i class="fas fa-tachometer-alt me-2"></i>
+                            डॅशबोर्डवर जा / Go to Dashboard
+                        </a>
+                        
+                        {% if form_type == 'bonafide' %}
+                            <a href="{{ url_for('bonafide_certificate', form_id=form_id) }}" class="btn btn-success">
+                                <i class="fas fa-certificate me-2"></i>
+                                प्रमाणपत्र पहा / View Certificate
+                            </a>
+                        {% endif %}
+                        
+                        <a href="{{ url_for('index') }}" class="btn btn-outline-secondary">
+                            <i class="fas fa-home me-2"></i>
+                            मुख्य पान / Home
+                        </a>
+                    </div>
+                </div>
+                <div class="card-footer text-muted text-center">
+                    <small>
+                        <i class="fas fa-clock me-1"></i>
+                        सबमिशन वेळ: {{ moment().format('DD/MM/YYYY HH:mm') }} / 
+                        Submission Time: {{ moment().format('DD/MM/YYYY HH:mm') }}
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// Auto-redirect to dashboard after 10 seconds
+setTimeout(function() {
+    if (confirm('डॅशबोर्डवर परत जायचे? / Would you like to return to dashboard?')) {
+        window.location.href = "{{ url_for('student_dashboard') }}";
+    }
+}, 10000);
+</script>
+{% endblock %}
