@@ -377,6 +377,112 @@ function printElement(elementId) {
     setTimeout(() => printWindow.close(), 1000);
 }
 
+// PDF Generation function
+function saveFormAsPDF(formId, filename = 'form') {
+    const form = document.getElementById(formId) || document.querySelector('form');
+    if (!form) {
+        showAlert('फॉर्म सापडला नाही / Form not found', 'danger');
+        return;
+    }
+    
+    // Create a new window with form content
+    const printWindow = window.open('', '_blank');
+    const formClone = form.cloneNode(true);
+    
+    // Remove buttons and file inputs from clone
+    const buttonsToRemove = formClone.querySelectorAll('button, input[type="submit"], input[type="file"]');
+    buttonsToRemove.forEach(btn => btn.remove());
+    
+    // Convert form inputs to display values
+    const inputs = formClone.querySelectorAll('input, select, textarea');
+    inputs.forEach(input => {
+        const label = formClone.querySelector(`label[for="${input.name}"]`) || 
+                     formClone.querySelector(`label[for="${input.id}"]`);
+        const labelText = label ? label.textContent : input.name;
+        
+        let value = input.value || '';
+        if (input.type === 'checkbox') {
+            value = input.checked ? 'हो / Yes' : 'नाही / No';
+        } else if (input.type === 'radio') {
+            if (input.checked) value = input.value;
+            else return;
+        }
+        
+        // Create display element
+        const displayDiv = document.createElement('div');
+        displayDiv.className = 'form-group mb-3';
+        displayDiv.innerHTML = `
+            <div class="form-label fw-bold">${labelText}</div>
+            <div class="form-value border p-2 bg-light">${value}</div>
+        `;
+        
+        input.parentNode.replaceChild(displayDiv, input);
+    });
+    
+    printWindow.document.write(`
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>${filename}</title>
+            <meta charset="UTF-8">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+            <style>
+                body { 
+                    font-family: 'Noto Sans Devanagari', sans-serif; 
+                    font-size: 12pt;
+                    line-height: 1.4;
+                }
+                .form-label { 
+                    color: #2c3e50; 
+                    margin-bottom: 5px;
+                }
+                .form-value { 
+                    min-height: 30px;
+                    border-radius: 4px;
+                }
+                .section-title {
+                    color: #2c3e50;
+                    border-bottom: 2px solid #3498db;
+                    padding-bottom: 10px;
+                    margin: 20px 0;
+                }
+                @media print {
+                    .no-print { display: none !important; }
+                    body { font-size: 11pt; }
+                }
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <div class="text-center mb-4">
+                    <h2>हार्मनी हँड्स विद्यार्थी ERP सिस्टम</h2>
+                    <h3>Harmony Hands Student ERP System</h3>
+                </div>
+                ${formClone.outerHTML}
+                <div class="text-center mt-4 no-print">
+                    <button onclick="window.print()" class="btn btn-primary me-2">
+                        <i class="fas fa-print"></i> प्रिंट करा / Print
+                    </button>
+                    <button onclick="window.close()" class="btn btn-secondary">
+                        <i class="fas fa-times"></i> बंद करा / Close
+                    </button>
+                </div>
+            </div>
+            <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        </body>
+        </html>
+    `);
+    
+    printWindow.document.close();
+    
+    // Focus and show print dialog after a short delay
+    setTimeout(() => {
+        printWindow.focus();
+        showAlert('PDF तयार केला गेला आहे! प्रिंट करण्यासाठी Ctrl+P दाबा / PDF generated! Press Ctrl+P to print', 'success');
+    }, 500);
+}
+
 // Export functions for global use
 window.HarmonyHands = {
     showAlert,
@@ -386,7 +492,8 @@ window.HarmonyHands = {
     printElement,
     saveToLocalStorage,
     getFromLocalStorage,
-    formatIndianNumber
+    formatIndianNumber,
+    saveFormAsPDF
 };
 
 // Service Worker registration (for future PWA support)

@@ -38,10 +38,10 @@ class User(UserMixin, db.Model):
             else:
                 new_num = 1
             
-            if new_num <= 300:
+            if new_num <= 900:
                 self.student_id = f"STU{new_num:03d}"
             else:
-                raise ValueError("Maximum student limit reached (STU300)")
+                raise ValueError("Maximum student limit reached (STU900)")
 
 class AdmissionForm(db.Model):
     id = db.Column(db.Integer, primary_key=True)

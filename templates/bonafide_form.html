@@ -16,7 +16,7 @@
                 <div class="card-body">
                     <p class="text-muted mb-4">शाळेचे नाव: संग्राम मुकबधीर विद्यालय</p>
                     
-                    <form method="POST">
+                    <form id="bonafideForm" method="POST">
                         {{ form.hidden_tag() }}
                         
                         <div class="mb-3">
@@ -131,6 +131,9 @@
                         </div>
                         
                         <div class="text-center">
+                            <button type="button" class="btn btn-secondary btn-lg me-3" onclick="HarmonyHands.saveFormAsPDF('bonafideForm', 'प्रमाणपत्र_Bonafide_Certificate')">
+                                <i class="fas fa-file-pdf me-2"></i>PDF म्हणून जतन करा / Save as PDF
+                            </button>
                             {{ form.submit(class="btn btn-success btn-lg") }}
                         </div>
                     </form>

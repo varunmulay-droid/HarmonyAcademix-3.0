@@ -16,7 +16,7 @@
                 <div class="card-body">
                     <p class="text-muted mb-4">शाळेचे नाव: संग्राम मुकबधीर विद्यालय</p>
                     
-                    <form method="POST">
+                    <form id="pratinidhanForm" method="POST">
                         <div class="mb-3">
                             <label for="student_name" class="form-label">विद्यार्थ्याचे पूर्ण नाव / Student's Full Name</label>
                             <input type="text" class="form-control" id="student_name" name="student_name" required>
@@ -71,6 +71,9 @@
                         </div>
                         
                         <div class="text-center">
+                            <button type="button" class="btn btn-secondary btn-lg me-3" onclick="HarmonyHands.saveFormAsPDF('pratinidhanForm', 'प्रतिनिधान_प्रमाणपत्र_Pratinidhan_Certificate')">
+                                <i class="fas fa-file-pdf me-2"></i>PDF म्हणून जतन करा / Save as PDF
+                            </button>
                             <button type="submit" class="btn btn-danger btn-lg">
                                 <i class="fas fa-certificate me-2"></i>प्रमाणपत्र तयार करा / Generate Certificate
                             </button>

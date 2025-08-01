@@ -14,7 +14,7 @@
                     </h3>
                 </div>
                 <div class="card-body">
-                    <form method="POST" enctype="multipart/form-data">
+                    <form id="hostelForm" method="POST" enctype="multipart/form-data">
                         <!-- Basic Information -->
                         <div class="mb-4">
                             <label class="form-label">माननीय अधीक्षक,</label>
@@ -170,6 +170,9 @@
                         </div>
                         
                         <div class="text-center mt-4">
+                            <button type="button" class="btn btn-secondary btn-lg me-3" onclick="HarmonyHands.saveFormAsPDF('hostelForm', 'वसतिगृह_अर्ज_Hostel_Application')">
+                                <i class="fas fa-file-pdf me-2"></i>PDF म्हणून जतन करा / Save as PDF
+                            </button>
                             <button type="submit" class="btn btn-info btn-lg">
                                 <i class="fas fa-paper-plane me-2"></i>अर्ज जमा करा / Submit Application
                             </button>
